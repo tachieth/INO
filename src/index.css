@@ -1,13 +1,75 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.link {
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  color: #feb64d;
+}
+
+.img-pos {
+  left: 5px;
+}
+
+.timeline::before {
+  width: 6px;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.mobile-btn {
+  display: none;
+}
+
+.desktop-btn {
+  display: block;
+}
+
+.disabled {
+  opacity: 0.9;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 1169px) {
+  .vertical-timeline-element-icon {
+    margin-left: 6px !important;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .mobile-btn {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .desktop-btn {
+    display: none;
+  }
+}
+
+.inside-image {
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.glass {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  box-shadow: -1px 3px 11px -4px rgba(0, 0, 0, 0.75);
+}
+
+.roadmap-heading {
+  color: #fff !important;
+  margin-bottom: 10px;
 }
