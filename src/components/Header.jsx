@@ -22,22 +22,22 @@ export default function Header({ address, onConnect }) {
 
   return (
     <>
-      <Box className="header" p="15px">
+      <Box p="15px">
         <Flex maxW="1200px" mx="auto" justifyContent="space-between" alignItems="center">
           <Heading color="white">DUMMY</Heading>
 
           <Box display={{ base: 'none', md: 'block' }}>
-            <Link href="#about" className="link" mr="15px" color="white">
+            <Link href="#about" className="link" mr="25px" color="white">
               About
             </Link>
-            <Link href="#roadmap" className="link" mr="15px" color="white">
+            <Link href="#roadmap" className="link" mr="25px" color="white">
               Roadmap
             </Link>
-            <Link href="#gallery" className="link" mr="15px" color="white">
+            <Link href="#gallery" className="link" mr="25px" color="white">
               Gallery
             </Link>
 
-            <Link href="#team" className="link" color="white" mr="15px">
+            <Link href="#team" className="link" color="white">
               Team
             </Link>
           </Box>

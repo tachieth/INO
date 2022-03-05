@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Box, Flex, Text, Heading, Input } from '@chakra-ui/react';
+import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 
 import BG from '../assets/bg.jpeg';
 
@@ -33,7 +34,6 @@ export default function Home({data = {}, onConnect, address, onMint}) {
           h="100%"
           px={{ base: '20px', md: 0 }}
         >
-          <Heading color="white">DUMMY</Heading>
           <Flex flexDirection="column" justifyContent="center" alignItems="center" my="20px">
             <Heading color="white" fontSize="4xl" mb="15px">
               {`${totalSupply}/${maxSupply}`}
@@ -51,13 +51,15 @@ export default function Home({data = {}, onConnect, address, onMint}) {
                 minW="50px"
                 justifyContent="center"
                 alignItems="center"
-                fontSize="xl"
                 borderRadius="5px"
-                fontWeight="bold"
                 borderRightRadius="0px"
-                onClick={() => setCount(1)}
+                onClick={() => {
+                  if (Number(count) > 1) {
+                    setCount(count - 1);
+                  }
+                }}
               >
-                Min
+                <AiOutlineMinus size="50" />
               </Flex>
               <Input
                 type="number"
@@ -74,7 +76,7 @@ export default function Home({data = {}, onConnect, address, onMint}) {
                 value={count}
                 onChange={(e) => {
                   const { value } = e.target;
-                  if (value <= maxMintAmount) {
+                  if (Number(value) <= Number(maxMintAmount)) {
                     setCount(value);
                   }
                 }}
@@ -88,13 +90,15 @@ export default function Home({data = {}, onConnect, address, onMint}) {
                 minW="50px"
                 justifyContent="center"
                 alignItems="center"
-                fontSize="xl"
                 borderRadius="5px"
-                fontWeight="bold"
                 borderLeftRadius="0px"
-                onClick={() => setCount(10)}
+                onClick={() => {
+                  if (Number(count) < Number(maxMintAmount)) {
+                    setCount(count + 1);
+                  }
+                }}
               >
-                Max
+                <AiOutlinePlus size="50" />
               </Flex>
             </Flex>
           </Flex>

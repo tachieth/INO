@@ -5,6 +5,8 @@ import Benji from '../assets/benji.jpeg';
 import Giovanni from '../assets/giovanni.jpeg';
 import Matt from '../assets/matt.jpeg';
 import Paul from '../assets/paul.jpeg';
+import Roberto from '../assets/roberto.jpeg';
+import Zane from '../assets/zane.jpeg';
 
 export default function About() {
   return (
@@ -34,12 +36,8 @@ export default function About() {
           <TeamCard name="DUMMY" image={Giovanni} position="Co-founder and Community Expert" />
           <TeamCard name="DUMMY" image={Matt} position="Marketing expert" />
           <TeamCard name="DUMMY" image={Paul} position="nft advisor" />
-          <TeamCard
-            name="DUMMY"
-            image="roberto.jpeg"
-            position="Co-founder and Blockchain Developer"
-          />
-          <TeamCard name="DUMMY" image="zane.jpeg" position="DUMMY artists" />
+          <TeamCard name="DUMMY" image={Roberto} position="Co-founder and Blockchain Developer" />
+          <TeamCard name="DUMMY" image={Zane} position="DUMMY artists" />
         </Flex>
       </Flex>
     </Flex>

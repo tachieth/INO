@@ -18,7 +18,7 @@ export default function About() {
       <Heading color="white" fontSize="6xl" fontWeight="bold" mt="50px" mb="80px">
         About
       </Heading>
-      <Flex mb="50px" flexDirection={{ base: 'column', md: 'row' }}>
+      <Flex mb="50px" flexDirection={{ base: 'column', md: 'row' }} alignItems="center">
         <Box mr={{ base: 0, md: '50px' }}>
           <Heading color="white" mb="20px" textAlign={{ base: 'center', md: 'left' }}>
             DUMMY
@@ -43,22 +43,14 @@ export default function About() {
           <Image
             src={Image1}
             maxW="320px"
-            position="absolute"
-            top="50%"
-            left="50%"
-            className="inside-image"
           />
         </Box>
       </Flex>
-      <Flex mb="50px" flexDirection={{ base: 'column-reverse', md: 'row' }}>
+      <Flex mb="50px" flexDirection={{ base: 'column-reverse', md: 'row' }} alignItems="center">
         <Box position="relative" w="400px">
           <Image
             src={Image2}
             maxW="320px"
-            position="absolute"
-            top="50%"
-            left="50%"
-            className="inside-image"
           />
         </Box>
         <Box ml={{ base: 0, md: '50px' }}>
@@ -83,7 +75,7 @@ export default function About() {
           </Text>
         </Box>
       </Flex>
-      <Flex flexDirection={{ base: 'column', md: 'row' }}>
+      <Flex flexDirection={{ base: 'column', md: 'row' }} alignItems="center">
         <Box mr={{ base: 0, md: '50px' }}>
           <Heading color="white" mb="20px" textAlign={{ base: 'center', md: 'left' }}>
             DUMMY
@@ -110,10 +102,6 @@ export default function About() {
           <Image
             src={Banner}
             maxW="320px"
-            position="absolute"
-            top="50%"
-            left="50%"
-            className="inside-image"
           />
         </Box>
       </Flex>

@@ -62,23 +62,21 @@ export default function Gallery() {
         },
       ],
     };
+  
+  const getUrlPath = (path) => {
+    return new URL(path, import.meta.url).href;
+  }
   return (
     <Box py="30px" id="gallery">
-      <Heading
-        color="white"
-        fontSize="6xl"
-        fontWeight="bold"
-        my="50px"
-        textAlign="center"
-      >
-       Gallery
+      <Heading color="white" fontSize="6xl" fontWeight="bold" my="50px" textAlign="center">
+        Gallery
       </Heading>
       <Text fontSize="2xl" mb="30px" textAlign="center" color="white">
         All DUMMY Holders will be included in our mining project too.
       </Text>
       <Slider {...settings}>
-        {images.map(img => (
-          <Image key={img} src={require(`../assets/${img + 1}.jpeg`)} />
+        {images.map((img) => (
+          <Image key={img} src={getUrlPath(`../assets/${img + 1}.jpeg`)} />
         ))}
       </Slider>
     </Box>
