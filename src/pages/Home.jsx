@@ -26,7 +26,7 @@ export default function Home({data = {}, onConnect, address, onMint}) {
         bg="black"
         opacity="0.55"
       ></Box>
-      <Box maxW="1200px" mx="auto" position="relative" zIndex="5" h="100vh">
+      <Box maxW="1200px" mx="auto" position="relative" zIndex="2" h="100vh">
         <Flex
           flexDirection="column"
           justifyContent="center"

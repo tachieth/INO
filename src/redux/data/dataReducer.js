@@ -1,12 +1,12 @@
 const initialState = {
   loading: false,
-  name: '',
   totalSupply: 0,
   cost: 0,
-  error: false,
-  errorMsg: '',
+  error: null,
   maxSupply: 6000,
   maxMintAmount: 10,
+  saleActive: false,
+  presaleActive: false,
 };
 
 const dataReducer = (state = initialState, action) => {
@@ -15,27 +15,20 @@ const dataReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: true,
-        error: false,
-        errorMsg: '',
+        error: null,
       };
     case 'CHECK_DATA_SUCCESS':
       return {
         ...state,
+        ...action.payload,
         loading: false,
-        name: action.payload.name,
-        totalSupply: action.payload.totalSupply,
-        cost: action.payload.cost,
-        maxSupply: action.payload.maxSupply,
-        maxMintAmount: action.payload.maxMintAmount,
-        error: false,
-        errorMsg: '',
+        error: null,
       };
     case 'CHECK_DATA_FAILED':
       return {
-        ...initialState,
+        ...state,
         loading: false,
-        error: true,
-        errorMsg: action.payload,
+        error: action.payload,
       };
     default:
       return state;

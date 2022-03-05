@@ -1,38 +1,48 @@
+import {
+  CONNECTION_REQUEST,
+  CONNECTION_SUCCESS,
+  CONNECTION_FAILED,
+  UPDATE_ADDRESS,
+  RESET,
+} from '../constant';
+
 const initialState = {
   loading: false,
-  account: null,
+  address: null,
   smartContract: null,
   web3: null,
-  errorMsg: '',
+  provider: null,
+  chainId: 4,
+  error: '',
 };
 
 const blockchainReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'CONNECTION_REQUEST':
+    case CONNECTION_REQUEST:
       return {
-        ...initialState,
+        ...state,
         loading: true,
       };
-    case 'CONNECTION_SUCCESS':
+    case CONNECTION_SUCCESS:
+      return {
+        ...state,
+        ...action.payload,
+        loading: false,
+        error: '',
+      };
+    case CONNECTION_FAILED:
       return {
         ...state,
         loading: false,
-        account: action.payload.account,
-        smartContract: action.payload.smartContract,
-        web3: action.payload.web3,
-        errorMsg: '',
+        error: action.payload,
       };
-    case 'CONNECTION_FAILED':
-      return {
-        ...initialState,
-        loading: false,
-        errorMsg: action.payload,
-      };
-    case 'UPDATE_ACCOUNT':
+    case UPDATE_ADDRESS:
       return {
         ...state,
-        account: action.payload.account,
+        address: action.payload.address,
       };
+    case RESET:
+      return initialState;
     default:
       return state;
   }

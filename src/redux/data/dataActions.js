@@ -1,22 +1,24 @@
-// log
-import store from '../store';
 
-const fetchDataRequest = () => {
+import { REQUEST_DATA,
+REQUEST_DATA_SUCCESS,
+REQUEST_DATA_FAILED } from '../constant';
+
+export const fetchDataRequest = () => {
   return {
-    type: 'CHECK_DATA_REQUEST',
+    type: REQUEST_DATA,
   };
 };
 
-const fetchDataSuccess = payload => {
+export const fetchDataSuccess = payload => {
   return {
-    type: 'CHECK_DATA_SUCCESS',
+    type: REQUEST_DATA_SUCCESS,
     payload: payload,
   };
 };
 
-const fetchDataFailed = payload => {
+export const fetchDataFailed = payload => {
   return {
-    type: 'CHECK_DATA_FAILED',
+    type: REQUEST_DATA_FAILED,
     payload: payload,
   };
 };

@@ -1,5 +1,6 @@
 import { applyMiddleware, compose, createStore, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
+import logger from 'redux-logger';
 import blockchainReducer from './blockchain/blockchainReducer';
 import dataReducer from './data/dataReducer';
 
@@ -8,7 +9,7 @@ const rootReducer = combineReducers({
   data: dataReducer,
 });
 
-const middleware = [thunk];
+const middleware = [thunk, logger];
 const composeEnhancers = compose(applyMiddleware(...middleware));
 
 const configureStore = () => {
