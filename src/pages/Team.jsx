@@ -1,21 +1,15 @@
 import { Flex, Heading } from '@chakra-ui/react';
 
 import TeamCard from '../components/TeamCard';
-import Benji from '../assets/benji.jpeg';
-import Giovanni from '../assets/giovanni.jpeg';
-import Matt from '../assets/matt.jpeg';
-import Paul from '../assets/paul.jpeg';
-import Roberto from '../assets/roberto.jpeg';
-import Zane from '../assets/zane.jpeg';
 
 export default function About() {
   return (
     <Flex
       flexDirection="column"
       alignItems="center"
-      py="30px"
       id="team"
       px={{ base: '20px', md: 0 }}
+      py="50px"
     >
       <Flex
         maxW="1200px"
@@ -24,7 +18,7 @@ export default function About() {
         flexDirection="column"
         alignItems="center"
       >
-        <Heading color="white" fontSize="6xl" fontWeight="bold" mt="50px" mb="30px">
+        <Heading color="white" fontSize="6xl" fontWeight="bold" mt="30px" mb="30px">
           Team
         </Heading>
         <Flex
@@ -32,12 +26,14 @@ export default function About() {
           alignItems={{ base: 'center', md: 'flex-start' }}
           flexWrap="wrap"
         >
-          <TeamCard name="DUMMY" image={Benji} position="Co-founder and Business Expert" />
-          <TeamCard name="DUMMY" image={Giovanni} position="Co-founder and Community Expert" />
-          <TeamCard name="DUMMY" image={Matt} position="Marketing expert" />
-          <TeamCard name="DUMMY" image={Paul} position="nft advisor" />
-          <TeamCard name="DUMMY" image={Roberto} position="Co-founder and Blockchain Developer" />
-          <TeamCard name="DUMMY" image={Zane} position="DUMMY artists" />
+          <TeamCard name="Frank Choi" image="/images/t1.jpg" position="Founder" />
+          <TeamCard name="Social Gravity" image="/images/t2.jpg" position="Marketing Director" />
+          <TeamCard name="Hansan" image="/images/t3.jpg" position="Art Director" />
+          <TeamCard
+            name="Faisal Ali"
+            image="/images/t4.jpg"
+            position="Smart Contract & Developer"
+          />
         </Flex>
       </Flex>
     </Flex>

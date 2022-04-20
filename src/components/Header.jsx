@@ -18,15 +18,15 @@ import { shortenAddress } from '../candy-machine';
 
 export default function Header({ address, onConnect }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [placement] = React.useState('right');
+  const [placement] = React.useState('left');
 
   return (
     <>
-      <Box p="15px">
+      <Box p="15px" position="absolute" top="0" zIndex="5">
         <Flex maxW="1200px" mx="auto" justifyContent="space-between" alignItems="center">
-          <Heading color="white">DUMMY</Heading>
+          {/* <Heading color="white">DUMMY</Heading> */}
 
-          <Box display={{ base: 'none', md: 'block' }}>
+          {/* <Box display={{ base: 'none', md: 'block' }}>
             <Link href="#about" className="link" mr="25px" color="white">
               About
             </Link>
@@ -40,15 +40,15 @@ export default function Header({ address, onConnect }) {
             <Link href="#team" className="link" color="white">
               Team
             </Link>
-          </Box>
-          {!address ? (
+          </Box> */}
+          {/* {address ? (
             <Flex
               as="button"
-              bg="green.700"
-              width="200px"
-              h="40px"
+              bg="blue"
+              width="260px"
+              h="60px"
               color="white"
-              borderRadius="5px"
+              borderRadius="35px"
               justifyContent="center"
               alignItems="center"
               className="desktop-btn"
@@ -58,24 +58,26 @@ export default function Header({ address, onConnect }) {
               Connect Wallet
             </Flex>
           ) : (
-            <Box
-              bg="green.700"
-              px="20px"
-              py="10px"
-              borderRadius="5px"
+            <Flex
+              bg="blue"
+                w="260px"
+                h="60px"
+                borderRadius="35px"
+                justifyContent="center"
+                alignItems="center"
               display={{ base: 'none', lg: 'flex' }}
             >
               <Text color="white">{shortenAddress(address || '')}</Text>
-            </Box>
-          )}
+            </Flex>
+          )} */}
           <Box
             as="button"
-            bg="white"
+            bg="#32492d"
             p="2"
             onClick={onOpen}
-            display={{ base: 'block', md: 'none' }}
+            display={{ base: 'block', md: 'block' }}
           >
-            <HiMenu color="black" size="30" />
+            <HiMenu color="white" size="30" />
           </Box>
         </Flex>
       </Box>
@@ -83,17 +85,19 @@ export default function Header({ address, onConnect }) {
         placement={placement}
         onClose={onClose}
         isOpen={isOpen}
-        display={{ base: 'block', md: 'none' }}
+        display={{ base: 'block', md: 'block' }}
       >
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerHeader borderBottomWidth="1px">Menu</DrawerHeader>
-          <DrawerBody>
+          <DrawerHeader bg="#32492d" color="white" borderBottomWidth="1px">
+            Menu
+          </DrawerHeader>
+          <DrawerBody bg="#32492d" color="white">
             <Link
               href="#about"
               className="link"
               display="block"
-              color="black"
+              // color="black"
               fontSize="18px"
               py="15px"
             >
@@ -103,53 +107,73 @@ export default function Header({ address, onConnect }) {
               href="#roadmap"
               className="link"
               display="block"
-              color="black"
+              // color="black"
               fontSize="18px"
               py="15px"
             >
               Roadmap
             </Link>
-            <Link
-              href="#gallery"
+            {/* <Link
+              href="#mission"
               className="link"
               display="block"
-              color="black"
+              // color="black"
               fontSize="18px"
               py="15px"
             >
-              Gallery
-            </Link>
+              Mission
+            </Link> */}
 
             <Link
               href="#team"
               display="block"
               className="link"
-              color="black"
+              // color="black"
               fontSize="18px"
               py="15px"
             >
               Team
+            </Link>
+            <Link
+              href="/Whitepaper.pdf"
+              className="link"
+              display="block"
+              // color="black"
+              fontSize="18px"
+              py="15px"
+              isExternal
+            >
+              Whitepaper
             </Link>
 
             {!address ? (
               <Flex
                 className="mobile-btn"
                 as="button"
-                bg="green.700"
+                bg="#cc9967"
                 width="200px"
-                h="40px"
+                h="50px"
                 color="white"
-                borderRadius="5px"
+                borderRadius="25px"
                 justifyContent="center"
                 alignItems="center"
                 onClick={onConnect}
+                mt="15px"
               >
-                Select Wallet
+                Connect Wallet
               </Flex>
             ) : (
-              <Box bg="green.700" px="20px" py="10px" borderRadius="5px">
+              <Flex
+                bg="#cc9967"
+                width="200px"
+                h="50px"
+                borderRadius="25px"
+                justifyContent="center"
+                alignItems="center"
+                mt="15px"
+              >
                 <Text color="white">{shortenAddress(address || '')}</Text>
-              </Box>
+              </Flex>
             )}
           </DrawerBody>
         </DrawerContent>

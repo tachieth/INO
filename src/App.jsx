@@ -8,8 +8,8 @@ import { providers, Contract } from 'ethers';
 import WalletLink from 'walletlink';
 import Web3Modal from 'web3modal';
 
-import { Header, Footer } from './components';
-import { Home, About, RoadMap, Gallery, Team, FAQ } from './pages';
+import {Header, Footer } from './components';
+import { Home, About, RoadMap,Mission,Project,  Team} from './pages';
 import {
   connectRequest,
   connectSuccess,
@@ -19,7 +19,6 @@ import {
 } from './redux/blockchain/blockchainActions';
 import { fetchDataRequest, fetchDataSuccess, fetchDataFailed } from './redux/data/dataActions';
 import ContractAbi from './contracts/ABI.json';
-import BG from './assets/bg.jpg';
 
 const { VITE_APP_CONTRACT_ADDRESS, VITE_INFURA_ID, VITE_APP_NETWORK_ID, VITE_APP_NETWORK } =
   import.meta.env;
@@ -32,11 +31,15 @@ const extendedTheme = extendTheme({
   },
   colors: {
     ...theme.colors,
-    bg: '#f5f5f1',
+    bg: '#293c38',
     bgLight: '#efeee8',
     bgDark: '#e8e7df',
     lightBlack: '#181817',
     lightOrange: '#feb64d',
+    blue: '#00aeee',
+    red: '#d54d9e',
+    green: '#018b44',
+    purple: '#8d51a2',
   },
 });
 
@@ -47,28 +50,28 @@ const providerOptions = {
       infuraId: VITE_INFURA_ID, // required
     },
   },
-  'custom-walletlink': {
-    display: {
-      logo: 'https://play-lh.googleusercontent.com/PjoJoG27miSglVBXoXrxBSLveV6e3EeBPpNY55aiUUBM9Q1RCETKCOqdOkX2ZydqVf0',
-      name: 'Coinbase',
-      description: 'Connect to Coinbase Wallet (not Coinbase App)',
-    },
-    options: {
-      appName: 'Coinbase', // Your app name
-      networkUrl: `https://mainnet.infura.io/v3/${VITE_INFURA_ID}`,
-      chainId: 1,
-    },
-    package: WalletLink,
-    connector: async (_, options) => {
-      const { appName, networkUrl, chainId } = options;
-      const walletLink = new WalletLink({
-        appName,
-      });
-      const provider = walletLink.makeWeb3Provider(networkUrl, chainId);
-      await provider.enable();
-      return provider;
-    },
-  },
+  // 'custom-walletlink': {
+  //   display: {
+  //     logo: 'https://play-lh.googleusercontent.com/PjoJoG27miSglVBXoXrxBSLveV6e3EeBPpNY55aiUUBM9Q1RCETKCOqdOkX2ZydqVf0',
+  //     name: 'Coinbase',
+  //     description: 'Connect to Coinbase Wallet (not Coinbase App)',
+  //   },
+  //   options: {
+  //     appName: 'Coinbase', // Your app name
+  //     networkUrl: `https://mainnet.infura.io/v3/${VITE_INFURA_ID}`,
+  //     chainId: 1,
+  //   },
+  //   package: WalletLink,
+  //   connector: async (_, options) => {
+  //     const { appName, networkUrl, chainId } = options;
+  //     const walletLink = new WalletLink({
+  //       appName,
+  //     });
+  //     const provider = walletLink.makeWeb3Provider(networkUrl, chainId);
+  //     await provider.enable();
+  //     return provider;
+  //   },
+  // },
 };
 
 const web3Modal = new Web3Modal({
@@ -177,14 +180,8 @@ function App() {
 
   return (
     <ChakraProvider theme={extendedTheme}>
-      <Box
-        minH="100vh"
-        backgroundImage={BG}
-        backgroundPosition="center"
-        // backgroundSize="cover"
-        backgroundAttachment="fixed"
-      >
-        <Header onConnect={connect} address={address} />
+      <Box minH="100vh" bgGradient="linear(to-r, #293c38, #5d5d5d)">
+        {/* <Header onConnect={connect} address={address} /> */}
         <Box>
           <Home
             onConnect={connect}
@@ -194,10 +191,12 @@ function App() {
             loading={blockchainLoading || data.loading}
           />
           <About />
+          <Mission />
+          <Project />
           <RoadMap />
-          <Gallery />
+          {/* <Gallery /> */}
           <Team />
-          <FAQ />
+          {/* <FAQ /> */}
         </Box>
         <Footer />
       </Box>

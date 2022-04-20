@@ -7,14 +7,14 @@ import 'react-vertical-timeline-component/style.min.css';
 
 export default function Roadmap() {
   const arrowStyle = {
-    borderRightColor: '#2B6CB0',
+    borderRightColor: 'transparent',
   };
   const contentStyle = {
-    background: '#2B6CB0',
+    background: 'transparent',
     boxShadow: 'none',
   };
   const iconStyle = {
-    background: '#2B6CB0',
+    background: '#ffbf81',
     width: 30,
     height: 30,
     marginLeft: -14,
@@ -22,115 +22,174 @@ export default function Roadmap() {
     top: 15,
   };
   return (
-    <Box maxW="1024px" mx="auto" py="30px" id="roadmap">
-      <Heading
-        color="white"
-        fontSize="6xl"
-        fontWeight="bold"
-        my="50px"
-        textAlign="center"
-      >
-        Roadmap
-      </Heading>
-      <VerticalTimeline className="timeline">
-        <VerticalTimelineElement
-          className="timeline-box left"
-          contentArrowStyle={arrowStyle}
-          contentStyle={contentStyle}
-          iconStyle={iconStyle}
-        >
-          <Heading className="roadmap-heading" color="white">
-            Level 1
-          </Heading>
-          <UnorderedList>
-            <ListItem color="white">
-              t is a long established fact that a reader will be distracted by
-            </ListItem>
-            <ListItem color="white">
-              Content here, content here', making it look like readable English
-            </ListItem>
-            <ListItem color="white">
-              the readable content of a page when looking at its layout.
-            </ListItem>
-          </UnorderedList>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="timeline-box left"
-          contentArrowStyle={arrowStyle}
-          contentStyle={contentStyle}
-          iconStyle={iconStyle}
-        >
-          <Heading className="roadmap-heading" color="white">
-            Level 2
-          </Heading>
-          <UnorderedList color="white">
-            <ListItem>
-              There are many variations of passages of Lorem Ipsum available,
-            </ListItem>
-            <ListItem>
-              All the Lorem Ipsum generators on the Internet tend to repeat
-              predefined chunks as necessary, making this the first true
-              generator on the Internet.
-            </ListItem>
-          </UnorderedList>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="timeline-box left"
-          contentArrowStyle={arrowStyle}
-          contentStyle={contentStyle}
-          iconStyle={iconStyle}
-        >
-          <Heading className="roadmap-heading">Level 3</Heading>
-          <UnorderedList color="white">
-            <ListItem>
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-            </ListItem>
-            <ListItem>
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form,
-            </ListItem>
-            <ListItem>It has roots in a piece of classical Latin</ListItem>
-          </UnorderedList>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="timeline-box left"
-          contentArrowStyle={arrowStyle}
-          contentStyle={contentStyle}
-          iconStyle={iconStyle}
-        >
-          <Heading className="roadmap-heading">Level 4</Heading>
-          <UnorderedList color="white">
-            <ListItem>
-              "But I must explain to you how all this mistaken idea of
-              denouncing
-            </ListItem>
-            <ListItem>
-              I will give you a complete account of the system, and expound the
-              actual teachings of the great explorer of the truth, the
-              master-builder
-            </ListItem>
-          </UnorderedList>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="timeline-box left"
-          contentArrowStyle={arrowStyle}
-          contentStyle={contentStyle}
-          iconStyle={iconStyle}
-        >
-          <Heading className="roadmap-heading">Level 5</Heading>
-          <UnorderedList color="white">
-            <ListItem>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti quos
-              dolores et quas molestias
-            </ListItem>
-            <ListItem>
-              On the other hand, we denounce with righteous indignation and
-              dislike men who are so beguiled and demoralized by the charms
-            </ListItem>
-          </UnorderedList>
-        </VerticalTimelineElement>
-      </VerticalTimeline>
-    </Box>
+    <>
+      <Box display={{ base: 'none', md: 'block' }} maxW="1024px" mx="auto" py="30px" id="roadmap">
+        <Heading color="white" fontSize="6xl" fontWeight="bold" my="50px" textAlign="center">
+          Roadmap
+        </Heading>
+        <VerticalTimeline className="timeline">
+          <VerticalTimelineElement
+            className="timeline-box left"
+            contentArrowStyle={arrowStyle}
+            contentStyle={contentStyle}
+            iconStyle={iconStyle}
+          >
+            <Heading textAlign="right" className="roadmap-heading" color="white">
+              Step 1
+            </Heading>
+
+            <Text textAlign="right" color="white">
+              {' '}
+              NFT Development -
+            </Text>
+            <Text textAlign="right" color="white">
+              {' '}
+              Social Media Launch -
+            </Text>
+            <Text textAlign="right" color="white">
+              {' '}
+              Website Development -
+            </Text>
+            <Text textAlign="right" color="white">
+              {' '}
+              Whitepaper Release -
+            </Text>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="timeline-box left"
+            contentArrowStyle={arrowStyle}
+            contentStyle={contentStyle}
+            iconStyle={iconStyle}
+          >
+            <Heading className="roadmap-heading" color="white">
+              Step 2
+            </Heading>
+
+            <Text color="white">- Influencer Promotions</Text>
+            <Text color="white">- Giveaways & Whitelist</Text>
+            <Text color="white">- NFT Minting</Text>
+            <Text color="white">- Token Release ($TERR)</Text>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="timeline-box left"
+            contentArrowStyle={arrowStyle}
+            contentStyle={contentStyle}
+            iconStyle={iconStyle}
+          >
+            <Heading textAlign="right" className="roadmap-heading">
+              Step 3
+            </Heading>
+
+            <Text color="white" textAlign="right">
+              Staking Begins -
+            </Text>
+            <Text color="white" textAlign="right">
+              Game Development -
+            </Text>
+            <Text color="white" textAlign="right">
+              Beta Testing -
+            </Text>
+            <Text color="white" textAlign="right">
+              Character Breeding -
+            </Text>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="timeline-box left"
+            contentArrowStyle={arrowStyle}
+            contentStyle={contentStyle}
+            iconStyle={iconStyle}
+          >
+            <Heading className="roadmap-heading">Step 4</Heading>
+
+            <Text color="white">- Public Game Release</Text>
+            <Text color="white">- Own Market Place</Text>
+          </VerticalTimelineElement>
+        </VerticalTimeline>
+      </Box>
+
+      <Box display={{ base: 'block', md: 'none' }} maxW="1024px" mx="auto" py="30px" id="roadmap">
+        <Heading color="white" fontSize="6xl" fontWeight="bold" my="50px" textAlign="center">
+          Roadmap
+        </Heading>
+        <VerticalTimeline className="timeline">
+          <VerticalTimelineElement
+            className="timeline-box left"
+            contentArrowStyle={arrowStyle}
+            contentStyle={contentStyle}
+            iconStyle={iconStyle}
+          >
+            <Heading  className="roadmap-heading" color="white">
+              Step 1
+            </Heading>
+
+            <Text  color="white">
+              {' '}
+              - NFT Development
+            </Text>
+            <Text  color="white">
+              {' '}
+              - Social Media Launch
+            </Text>
+            <Text  color="white">
+              {' '}
+              - Website Development
+            </Text>
+            <Text  color="white">
+              {' '}
+              - Whitepaper Release
+            </Text>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="timeline-box left"
+            contentArrowStyle={arrowStyle}
+            contentStyle={contentStyle}
+            iconStyle={iconStyle}
+          >
+            <Heading className="roadmap-heading" color="white">
+              Step 2
+            </Heading>
+
+            <Text color="white">- Influencer Promotions</Text>
+            <Text color="white">- Giveaways & Whitelist</Text>
+            <Text color="white">- NFT Minting</Text>
+            <Text color="white">- Token Release ($TERR)</Text>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="timeline-box left"
+            contentArrowStyle={arrowStyle}
+            contentStyle={contentStyle}
+            iconStyle={iconStyle}
+          >
+            <Heading  className="roadmap-heading">
+              Step 3
+            </Heading>
+
+            <Text color="white" >
+             - Staking Begins 
+            </Text>
+            <Text color="white" >
+             - Game Development 
+            </Text>
+            <Text color="white" >
+             - Beta Testing 
+            </Text>
+            <Text color="white" >
+            -  Character Breeding 
+            </Text>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="timeline-box left"
+            contentArrowStyle={arrowStyle}
+            contentStyle={contentStyle}
+            iconStyle={iconStyle}
+          >
+            <Heading className="roadmap-heading">Step 4</Heading>
+
+            <Text color="white">- Public Game Release</Text>
+            <Text color="white">- Own Market Place</Text>
+          </VerticalTimelineElement>
+        </VerticalTimeline>
+      </Box>
+    </>
   );
 }

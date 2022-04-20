@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Box, Flex, Text, Heading, Input } from '@chakra-ui/react';
+import { Box, Flex, Text, Heading, Input, Image } from '@chakra-ui/react';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
+import { Header} from '../components';
 
-import BG from '../assets/bg.jpeg';
 
 export default function Home({data = {}, onConnect, address, onMint}) {
   const [count, setCount] = useState(1);
@@ -10,14 +10,17 @@ export default function Home({data = {}, onConnect, address, onMint}) {
 
   return (
     <Box
-      minH="100vh"
-      bg="black"
+      // minH={{ base: '35vh', md: '125vh' }}
+      // backgroundSize={{ base: '100%', md: '100%' }}
+      // backgroundPosition="top"
+      // backgroundImage="/images/bg.jpg"
+      // backgroundRepeat="no-repeat"
       position="relative"
-      backgroundImage={BG}
-      backgroundPosition="center"
-      backgroundSize="cover"
     >
-      <Box
+      <Image  src="/images/bg.jpg" w="100vw" />
+      <Header onConnect={onConnect} address={address} />
+
+      {/* <Box
         position="absolute"
         left="0"
         right="0"
@@ -25,16 +28,16 @@ export default function Home({data = {}, onConnect, address, onMint}) {
         bottom="0"
         bg="black"
         opacity="0.55"
-      ></Box>
-      <Box maxW="1200px" mx="auto" position="relative" zIndex="2" h="100vh">
-        <Flex
+      ></Box> */}
+      {/* <Box maxW="1200px" mx="auto" position="relative" zIndex="2" h="100vh">
+        {/* <Flex
           flexDirection="column"
           justifyContent="center"
           alignItems="center"
           h="100%"
           px={{ base: '20px', md: 0 }}
         >
-          <Flex flexDirection="column" justifyContent="center" alignItems="center" my="20px">
+          {/* <Flex flexDirection="column" justifyContent="center" alignItems="center" my="20px">
             <Heading color="white" fontSize="4xl" mb="15px">
               {`${totalSupply}/${maxSupply}`}
             </Heading>
@@ -101,8 +104,8 @@ export default function Home({data = {}, onConnect, address, onMint}) {
                 <AiOutlinePlus size="50" />
               </Flex>
             </Flex>
-          </Flex>
-          <Flex mt="20px">
+          </Flex> */}
+      {/* <Flex mt="20px">
             <Box
               as="button"
               bg="green.700"
@@ -123,9 +126,18 @@ export default function Home({data = {}, onConnect, address, onMint}) {
                 ? 'Please wait...'
                 : 'Mint yours now'}
             </Box>
-          </Flex>
-        </Flex>
-      </Box>
+          </Flex> */}
+      {/* <Flex flexDirection={{ base: 'column', md: 'row' }}>
+            <Heading color="white" mr="20px">
+              This is a heading
+            </Heading>
+            <Text color="red" mr="50px">
+              This isa text
+            </Text>
+            <Image w="200px" src="/images/1.jpeg" />
+          </Flex> */}
+      {/* </Flex> */}
+      {/* </Box> */}
     </Box>
   );
 }

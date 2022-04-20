@@ -9,7 +9,10 @@ const rootReducer = combineReducers({
   data: dataReducer,
 });
 
-const middleware = [thunk, logger];
+const middleware = [thunk];
+if (!import.meta.env.PROD) {
+  middleware.push(logger);
+}
 const composeEnhancers = compose(applyMiddleware(...middleware));
 
 const configureStore = () => {
