@@ -24,8 +24,8 @@ export default function About() {
           <Image w="500px" src="/images/logo.png" />
         </Box>
 
-        <Box color="white" maxW="550px" mx="auto">
-          <Heading fontSize="45px" mb={{ base: '10px', md: '30px' }}>
+        <Box color="text" maxW="550px" mx="auto">
+          <Heading fontSize="45px" mb={{ base: '10px', md: '30px' }} color="darkGreen">
             Territorian Lore
           </Heading>
 
@@ -59,11 +59,12 @@ export default function About() {
           >
             <Flex
               mb={{ base: '20px', md: 0 }}
-              color="white"
+              // bg="white"
+              color="darkGreen"
               borderWidth="1px"
               w="250px"
               h="50px"
-              borderColor="white"
+              borderColor="darkGreen"
               justifyContent="center"
               alignItems="center"
               position="relative"
@@ -72,15 +73,15 @@ export default function About() {
 
               <Flex position="absolute" right="10px" flexDirection="column">
                 <Box as="button">
-                  <HiArrowSmUp color="white" />
+                  <HiArrowSmUp color="#EFFAFF" size="15" />
                 </Box>
                 <Box as="button">
-                  <HiArrowSmDown color="white" />
+                  <HiArrowSmDown color="#EFFAFF" size="15" />
                 </Box>
               </Flex>
             </Flex>
 
-            <Box color="white" bg="#cc9967" borderRadius="20px" w="250px" h="50px" as="button">
+            <Box color="black" bg="darkGreen" borderRadius="20px" w="250px" h="50px" as="button">
               <Heading fontSize="20px">CONNECT WALLET</Heading>
             </Box>
           </Flex>

@@ -55,6 +55,10 @@ html {
 }
 
 .timeline-box .vertical-timeline-element-content {
-  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
   border-radius: 15px;
 }
+
+/* .vertical-timeline.vertical-timeline--two-columns:before {
+  background: #002a44;
+} */

@@ -31,15 +31,13 @@ const extendedTheme = extendTheme({
   },
   colors: {
     ...theme.colors,
-    bg: '#293c38',
     bgLight: '#efeee8',
-    bgDark: '#e8e7df',
-    lightBlack: '#181817',
-    lightOrange: '#feb64d',
     blue: '#00aeee',
     red: '#d54d9e',
     green: '#018b44',
     purple: '#8d51a2',
+    darkGreen: '#EFFAFF',
+    text: '#EFFAFF',
   },
 });
 
@@ -180,7 +178,7 @@ function App() {
 
   return (
     <ChakraProvider theme={extendedTheme}>
-      <Box minH="100vh" bgGradient="linear(to-r, #293c38, #5d5d5d)">
+      <Box minH="100vh" bg="#6f9fcd">
         {/* <Header onConnect={connect} address={address} /> */}
         <Box>
           <Home

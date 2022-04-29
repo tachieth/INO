@@ -14,7 +14,7 @@ export default function Roadmap() {
     boxShadow: 'none',
   };
   const iconStyle = {
-    background: '#ffbf81',
+    background: '#265E88',
     width: 30,
     height: 30,
     marginLeft: -14,
@@ -24,7 +24,7 @@ export default function Roadmap() {
   return (
     <>
       <Box display={{ base: 'none', md: 'block' }} maxW="1024px" mx="auto" py="30px" id="roadmap">
-        <Heading color="white" fontSize="6xl" fontWeight="bold" my="50px" textAlign="center">
+        <Heading color="darkGreen" fontSize="6xl" fontWeight="bold" my="50px" textAlign="center">
           Roadmap
         </Heading>
         <VerticalTimeline className="timeline">
@@ -34,23 +34,23 @@ export default function Roadmap() {
             contentStyle={contentStyle}
             iconStyle={iconStyle}
           >
-            <Heading textAlign="right" className="roadmap-heading" color="white">
+            <Heading textAlign="right" className="roadmap-heading" color="darkGreen">
               Step 1
             </Heading>
 
-            <Text textAlign="right" color="white">
+            <Text textAlign="right" color="text">
               {' '}
               NFT Development -
             </Text>
-            <Text textAlign="right" color="white">
+            <Text textAlign="right" color="text">
               {' '}
               Social Media Launch -
             </Text>
-            <Text textAlign="right" color="white">
+            <Text textAlign="right" color="text">
               {' '}
               Website Development -
             </Text>
-            <Text textAlign="right" color="white">
+            <Text textAlign="right" color="text">
               {' '}
               Whitepaper Release -
             </Text>
@@ -65,10 +65,10 @@ export default function Roadmap() {
               Step 2
             </Heading>
 
-            <Text color="white">- Influencer Promotions</Text>
-            <Text color="white">- Giveaways & Whitelist</Text>
-            <Text color="white">- NFT Minting</Text>
-            <Text color="white">- Token Release ($TERR)</Text>
+            <Text color="text">- Influencer Promotions</Text>
+            <Text color="text">- Giveaways & Whitelist</Text>
+            <Text color="text">- NFT Minting</Text>
+            <Text color="text">- Token Release ($TERR)</Text>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="timeline-box left"
@@ -80,16 +80,16 @@ export default function Roadmap() {
               Step 3
             </Heading>
 
-            <Text color="white" textAlign="right">
+            <Text color="text" textAlign="right">
               Staking Begins -
             </Text>
-            <Text color="white" textAlign="right">
+            <Text color="text" textAlign="right">
               Game Development -
             </Text>
-            <Text color="white" textAlign="right">
+            <Text color="text" textAlign="right">
               Beta Testing -
             </Text>
-            <Text color="white" textAlign="right">
+            <Text color="text" textAlign="right">
               Character Breeding -
             </Text>
           </VerticalTimelineElement>
@@ -101,8 +101,8 @@ export default function Roadmap() {
           >
             <Heading className="roadmap-heading">Step 4</Heading>
 
-            <Text color="white">- Public Game Release</Text>
-            <Text color="white">- Own Market Place</Text>
+            <Text color="text">- Public Game Release</Text>
+            <Text color="text">- Own Market Place</Text>
           </VerticalTimelineElement>
         </VerticalTimeline>
       </Box>

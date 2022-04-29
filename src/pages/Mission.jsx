@@ -8,10 +8,10 @@ export default function About() {
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      py="10px"
+      pt="10px"
       id="mission"
       px={{ base: '20px', md: 0 }}
-      pb="50px"
+      // pb="50px"
     >
       <Flex
         mt="20px"
@@ -21,14 +21,15 @@ export default function About() {
         alignItems="center"
       >
         <Box>
-          <Image mb={{ base: '20px', md: 0 }} w="500px" src="/images/mision.png" />
+          <Image mb={{ base: '20px', md: '-10px' }} w="500px" src="/images/mision.png" />
         </Box>
 
-        <Box color="white" maxW="550px" mx="auto">
+        <Box color="text" maxW="550px" mx="auto">
           <Heading
             textAlign={{ base: 'center', md: 'left' }}
             fontSize="45px"
             mb={{ base: '10px', md: '30px' }}
+            color="darkGreen"
           >
             {' '}
             Mission
@@ -49,7 +50,7 @@ export default function About() {
           </Text>
           <Heading
             fontSize="45px"
-            color="white"
+            color="darkGreen"
             textAlign={{ base: 'center', md: 'left' }}
             maxW="1100px"
             mt="40px"
@@ -57,17 +58,17 @@ export default function About() {
           >
             Vision
           </Heading>
-          <Text color="white" mb="30px" textAlign={{ base: 'center', md: 'left' }} maxW="1100px">
+          <Text color="text" mb="30px" textAlign={{ base: 'center', md: 'left' }} maxW="1100px">
             Territorian is an NFT based game that allows users to earn passive tokens with our play
             to earn economy. Our vision would not exist without our community, because Territorian
             is synonymous with the community built around it.
           </Text>
-          <Text color="white" mb="30px" textAlign={{ base: 'center', md: 'left' }} maxW="1100px">
+          <Text color="text" mb="30px" textAlign={{ base: 'center', md: 'left' }} maxW="1100px">
             Our vision for how users interact with the Territorian ecosystem will continue to expand
             over time, and it’s important to note that we will grow and expand through observing
             user gameplay and user feedback.
           </Text>
-          <Text color="white" mb="20px" textAlign={{ base: 'center', md: 'left' }} maxW="1100px">
+          <Text color="text" mb="20px" textAlign={{ base: 'center', md: 'left' }} maxW="1100px">
             Territorian feels more like playing your favorite board game around the table with good
             company rather than engaging with a complicated platform. We noticed that the current
             NFT games on the market felt a little cold and robotic, so we created Territorian to be

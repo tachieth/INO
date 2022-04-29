@@ -18,7 +18,7 @@ export default function About() {
         flexDirection="column"
         alignItems="center"
       >
-        <Heading color="white" fontSize="6xl" fontWeight="bold" mt="30px" mb="30px">
+        <Heading color="darkGreen" fontSize="6xl" fontWeight="bold" mt="30px" mb="30px">
           Team
         </Heading>
         <Flex
