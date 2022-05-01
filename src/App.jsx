@@ -9,7 +9,7 @@ import WalletLink from 'walletlink';
 import Web3Modal from 'web3modal';
 
 import {Header, Footer } from './components';
-import { Home, About, RoadMap,Mission,Project,  Team} from './pages';
+import { Home, About, RoadMap, Mission, Project, Team, Demo } from './pages';
 import {
   connectRequest,
   connectSuccess,
@@ -191,6 +191,7 @@ function App() {
           <About />
           <Mission />
           <Project />
+          <Demo />
           <RoadMap />
           {/* <Gallery /> */}
           <Team />
