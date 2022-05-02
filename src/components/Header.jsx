@@ -22,7 +22,7 @@ export default function Header({ address, onConnect }) {
 
   return (
     <>
-      <Box p="15px" position="absolute" top="0" zIndex="5">
+      <Box p="15px" left="20px" position="absolute" top="20px" zIndex="5">
         <Flex maxW="1200px" mx="auto" justifyContent="space-between" alignItems="center">
           {/* <Heading color="white">DUMMY</Heading> */}
 

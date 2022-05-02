@@ -14,7 +14,8 @@ export default function Roadmap() {
     boxShadow: 'none',
   };
   const iconStyle = {
-    background: '#265E88',
+    // background: '#265E88',
+    background: '#6f9fcd',
     width: 30,
     height: 30,
     marginLeft: -14,

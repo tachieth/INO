@@ -17,7 +17,7 @@ export default function Home({data = {}, onConnect, address, onMint}) {
       // backgroundRepeat="no-repeat"
       position="relative"
     >
-      <Image  src="/images/bg.jpg" w="100vw" />
+      <Image  src="/images/banner.png" w="100vw" />
       <Header onConnect={onConnect} address={address} />
 
       {/* <Box

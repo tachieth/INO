@@ -178,7 +178,11 @@ function App() {
 
   return (
     <ChakraProvider theme={extendedTheme}>
-      <Box minH="100vh" bg="#6f9fcd">
+      <Box
+        minH="100vh"
+        // bg="#6f9fcd"
+        bgGradient="linear(to-r,#000046,#1CB5E0)"
+      >
         {/* <Header onConnect={connect} address={address} /> */}
         <Box>
           <Home
