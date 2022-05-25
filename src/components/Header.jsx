@@ -10,74 +10,184 @@ import {
   DrawerHeader,
   DrawerBody,
   Text,
+  Image,
   Heading,
 } from '@chakra-ui/react';
 import { HiMenu } from 'react-icons/hi';
+import { SiDiscord } from 'react-icons/si';
+import { AiOutlineInstagram } from 'react-icons/ai';
+import { AiOutlineTwitter } from 'react-icons/ai';
 
 import { shortenAddress } from '../candy-machine';
 
 export default function Header({ address, onConnect }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [placement] = React.useState('left');
+  const [placement] = React.useState('right');
 
   return (
     <>
-      <Box p="15px" left="20px" position="absolute" top="20px" zIndex="5">
-        <Flex maxW="1200px" mx="auto" justifyContent="space-between" alignItems="center">
-          {/* <Heading color="white">DUMMY</Heading> */}
+      <Box pb="20px" w="100%" position="relative" zIndex="5">
+        <Flex
+          // py="10px"
+          // borderBottomWidth={{ base: '0', md: '1px' }}
+          maxW="1200px"
+          px="10px"
+          mx="auto"
+          justifyContent="space-between"
+          alignItems="center"
+        >
+          {/* <Heading display={{ base: 'none', md: 'flex' }} color="white">
+            ISLAND
+          </Heading> */}
+          <Image
+            position="relative"
+            zIndex="5"
+            maxW={{ base: '78px', md: '111px' }}
+            src="/images/logo.png"
+          />
 
-          {/* <Box display={{ base: 'none', md: 'block' }}>
-            <Link href="#about" className="link" mr="25px" color="white">
-              About
-            </Link>
-            <Link href="#roadmap" className="link" mr="25px" color="white">
-              Roadmap
-            </Link>
-            <Link href="#gallery" className="link" mr="25px" color="white">
-              Gallery
-            </Link>
+          <Flex alignItems="center" justifyContent="center">
+            {' '}
+            <Flex fontSize="17px" display={{ base: 'none', md: 'flex' }}>
+              <Link
+                backgroundImage="/images/home.png"
+                backgroundPosition="center"
+                backgroundRepeat="no-repeat"
+                backgroundSize="100%"
+                p="20px"
+                href="#about"
+                // mr="10px"
+                color="white"
+              >
+                HOME
+              </Link>
 
-            <Link href="#team" className="link" color="white">
-              Team
-            </Link>
-          </Box> */}
-          {/* {address ? (
-            <Flex
-              as="button"
-              bg="blue"
-              width="260px"
-              h="60px"
-              color="white"
-              borderRadius="35px"
-              justifyContent="center"
-              alignItems="center"
-              className="desktop-btn"
-              display={{ base: 'none', lg: 'flex' }}
-              onClick={onConnect}
-            >
-              Connect Wallet
-            </Flex>
-          ) : (
-            <Flex
-              bg="blue"
-                w="260px"
-                h="60px"
-                borderRadius="35px"
-                justifyContent="center"
+              <Link
+                backgroundImage="/images/e1.png"
+                backgroundPosition="center"
+                backgroundRepeat="no-repeat"
+                backgroundSize="100%"
+                p="20px"
+                href="#about"
+                // h="10px"
+                display="block"
+                // mr="30px"
+                color="white"
+              >
+                E1
+              </Link>
+
+              <Link
+                backgroundImage="/images/galler.png"
+                backgroundPosition="center"
+                backgroundRepeat="no-repeat"
+                backgroundSize="100%"
+                p="20px"
+                href="#about"
+                // mr="30px"
+                color="white"
+              >
+                EVA MAP
+              </Link>
+              <Flex
                 alignItems="center"
-              display={{ base: 'none', lg: 'flex' }}
-            >
-              <Text color="white">{shortenAddress(address || '')}</Text>
+                justifyContent="center"
+                backgroundImage="/images/galler.png"
+                backgroundPosition="center"
+                backgroundRepeat="no-repeat"
+                backgroundSize="100%"
+                p="10px"
+                href="#about"
+                // mr="30px"
+                color="white"
+              >
+                <Text textAlign="center"> MANIFESTO</Text>
+              </Flex>
+              <Link
+                backgroundImage="/images/galler.png"
+                backgroundPosition="center"
+                backgroundRepeat="no-repeat"
+                backgroundSize="100%"
+                p="20px"
+                href="#about"
+                // mr="30px"
+                color="white"
+              >
+                GALLERY
+              </Link>
+              <Link
+                backgroundImage="/images/galler.png"
+                backgroundPosition="center"
+                backgroundRepeat="no-repeat"
+                backgroundSize="100%"
+                p="20px"
+                href="#about"
+                // mr="30px"
+                color="white"
+              >
+                CAREER
+              </Link>
+              <Flex>
+                {' '}
+                <Flex
+                  alignItems="center"
+                  justifyContent="center"
+                  backgroundImage="/images/twitter.png"
+                  backgroundPosition="center"
+                  backgroundRepeat="no-repeat"
+                  backgroundSize="100%"
+                  p="15px"
+                  href="#about"
+                  // mr="30px"
+                  color="black"
+                >
+                  <Link href="https://www.twitter.com/" isExternal>
+                    <Image maxW="17px" mx="auto" src="/images/twiterimage.png" />
+                  </Link>
+                </Flex>
+                <Flex
+                  alignItems="center"
+                  justifyContent="center"
+                  backgroundImage="/images/discord.png"
+                  backgroundPosition="center"
+                  backgroundRepeat="no-repeat"
+                  backgroundSize="100%"
+                  p="15px"
+                  href="#about"
+                  // mr="30px"
+                  color="black"
+                >
+                  <Link href="https://www.discord.com/" isExternal>
+                    <Image maxW="17px" mx="auto" src="/images/discord1.png" />
+                  </Link>
+                </Flex>
+                <Flex
+                  alignItems="center"
+                  justifyContent="center"
+                  backgroundImage="/images/insta.png"
+                  backgroundPosition="center"
+                  backgroundRepeat="no-repeat"
+                  backgroundSize="100%"
+                  p="15px"
+                  href="#about"
+                  // mr="30px"
+                  color="black"
+                >
+                  <Link href="https://www.instagram.com/" isExternal>
+                    <Image maxW="17px" mx="auto" src="/images/ig.png" />
+                  </Link>
+                </Flex>
+              </Flex>
             </Flex>
-          )} */}
+          </Flex>
           <Box
             as="button"
-            bg="#32492d"
+            bg="transparent"
             p="2"
             onClick={onOpen}
-            display={{ base: 'block', md: 'block' }}
+            display={{ base: 'block', md: 'none' }}
           >
-            <HiMenu color="white" size="30" />
+            <HiMenu color="#096069" size="30" />
           </Box>
         </Flex>
       </Box>
@@ -85,96 +195,189 @@ export default function Header({ address, onConnect }) {
         placement={placement}
         onClose={onClose}
         isOpen={isOpen}
-        display={{ base: 'block', md: 'block' }}
+        display={{ base: 'block', md: 'none' }}
       >
         <DrawerOverlay />
-        <DrawerContent>
-          <DrawerHeader bg="#32492d" color="white" borderBottomWidth="1px">
+        <DrawerContent bg="#FEFAEF">
+          <DrawerHeader color="black" borderBottomWidth="1px">
             Menu
           </DrawerHeader>
-          <DrawerBody bg="#32492d" color="white">
-            <Link
-              href="#about"
-              className="link"
-              display="block"
-              // color="black"
-              fontSize="18px"
-              py="15px"
+          <DrawerBody>
+            <Box
+              // maxW="120px"
+              // mx="auto"
+              // alignItems="center"
+              // w="100%"
+              flexDirection="column"
+              fontSize="17px"
+              display={{ base: 'block', md: 'none' }}
             >
-              About
-            </Link>
-            <Link
-              href="#roadmap"
-              className="link"
-              display="block"
-              // color="black"
-              fontSize="18px"
-              py="15px"
-            >
-              Roadmap
-            </Link>
-            {/* <Link
-              href="#mission"
-              className="link"
-              display="block"
-              // color="black"
-              fontSize="18px"
-              py="15px"
-            >
-              Mission
-            </Link> */}
+              <Link
+                backgroundImage="/images/home.png"
+                backgroundPosition="center"
+                backgroundRepeat="no-repeat"
+                backgroundSize="contain"
+                p="20px"
+                w="100px"
+                href="#about"
+                // mr="10px"
+                color="white"
+                display="block"
+              >
+                HOME
+              </Link>
 
-            <Link
-              href="#team"
-              display="block"
-              className="link"
-              // color="black"
-              fontSize="18px"
-              py="15px"
-            >
-              Team
-            </Link>
-            <Link
-              href="/Whitepaper.pdf"
-              className="link"
-              display="block"
-              // color="black"
-              fontSize="18px"
-              py="15px"
-              isExternal
-            >
-              Whitepaper
-            </Link>
+              <Link
+                backgroundImage="/images/e1.png"
+                backgroundPosition="center"
+                backgroundRepeat="no-repeat"
+                backgroundSize="contain"
+                p="20px"
+                display="block"
+                w="70px"
+                href="#about"
+                color="white"
+              >
+                E1
+              </Link>
 
-            {!address ? (
+              <Link
+                backgroundImage="/images/galler.png"
+                backgroundPosition="center"
+                backgroundRepeat="no-repeat"
+                backgroundSize="contain"
+                p="20px"
+                href="#about"
+                display="block"
+                w="120px"
+                color="white"
+              >
+                EVA MAP
+              </Link>
+              <Link
+                alignItems="center"
+                justifyContent="center"
+                backgroundImage="/images/galler.png"
+                backgroundPosition="center"
+                backgroundRepeat="no-repeat"
+                backgroundSize="contain"
+                p="10px"
+                href="#about"
+                display="block"
+                w="120px"
+                color="white"
+              >
+                <Text textAlign="center"> MANIFESTO</Text>
+              </Link>
+              <Link
+                backgroundImage="/images/galler.png"
+                backgroundPosition="center"
+                backgroundRepeat="no-repeat"
+                backgroundSize="contain"
+                p="20px"
+                href="#about"
+                display="block"
+                w="120px"
+                color="white"
+              >
+                GALLERY
+              </Link>
+              <Link
+                backgroundImage="/images/galler.png"
+                backgroundPosition="center"
+                backgroundRepeat="no-repeat"
+                backgroundSize="contain"
+                p="20px"
+                href="#about"
+                display="block"
+                w="120px"
+                color="white"
+              >
+                CAREER
+              </Link>
+              <Flex>
+                {' '}
+                <Flex
+                  alignItems="center"
+                  justifyContent="center"
+                  backgroundImage="/images/twitter.png"
+                  backgroundPosition="center"
+                  backgroundRepeat="no-repeat"
+                  backgroundSize="contain"
+                  p="15px"
+                  href="#about"
+                  // mr="30px"
+                  color="black"
+                >
+                  <Link href="https://www.twitter.com/" isExternal>
+                    <Image maxW="17px" mx="auto" src="/images/twiterimage.png" />
+                  </Link>
+                </Flex>
+                <Flex
+                  alignItems="center"
+                  justifyContent="center"
+                  backgroundImage="/images/discord.png"
+                  backgroundPosition="center"
+                  backgroundRepeat="no-repeat"
+                  backgroundSize="contain"
+                  p="15px"
+                  href="#about"
+                  // mr="30px"
+                  color="black"
+                >
+                  <Link href="https://www.discord.com/" isExternal>
+                    <Image maxW="17px" mx="auto" src="/images/discord1.png" />
+                  </Link>
+                </Flex>
+                <Flex
+                  alignItems="center"
+                  justifyContent="center"
+                  backgroundImage="/images/insta.png"
+                  backgroundPosition="center"
+                  backgroundRepeat="no-repeat"
+                  backgroundSize="contain"
+                  p="15px"
+                  href="#about"
+                  // mr="30px"
+                  color="black"
+                >
+                  <Link href="https://www.instagram.com/" isExternal>
+                    <Image maxW="17px" mx="auto" src="/images/ig.png" />
+                  </Link>
+                </Flex>
+              </Flex>
+            </Box>
+
+            {/* {!address ? (
               <Flex
                 className="mobile-btn"
                 as="button"
-                bg="#cc9967"
+                mt="30px"
+                bg="white"
                 width="200px"
-                h="50px"
-                color="white"
-                borderRadius="25px"
+                h="40px"
+                fontWeight="bold"
+                color="black"
+                borderRadius="5px"
                 justifyContent="center"
                 alignItems="center"
+                borderWidth="2px"
+                borderColor="black"
                 onClick={onConnect}
-                mt="15px"
               >
-                Connect Wallet
+                CONNECT
               </Flex>
             ) : (
-              <Flex
-                bg="#cc9967"
-                width="200px"
-                h="50px"
+              <Box
+                fontWeight="bold"
+                bgGradient="linear(to-r, #FE9C28, #FADB37)"
+                px="20px"
+                py="10px"
                 borderRadius="25px"
-                justifyContent="center"
-                alignItems="center"
-                mt="15px"
               >
-                <Text color="white">{shortenAddress(address || '')}</Text>
-              </Flex>
-            )}
+                <Text color="black">{shortenAddress(address || '')}</Text>
+              </Box>
+            )} */}
           </DrawerBody>
         </DrawerContent>
       </Drawer>

@@ -8,13 +8,13 @@ export default function TeamCard({ image, name, position ="" }) {
       w={{ base: '100%', md: '50%', lg: '20%' }}
     >
       <Flex justifyContent="center" position="relative" w="250px">
-        <Image src={image} maxW="200px" />
+        <Image src={image} maxW="250px" />
       </Flex>
       <Heading fontSize="30px" mt="30px" color="text">
         {name}
       </Heading>
       {position && (
-        <Text textAlign="center" mb="30px" color="text">
+        <Text  textAlign="center" mb="30px" color="text">
           {position}
         </Text>
       )}

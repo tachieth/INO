@@ -42,11 +42,18 @@ html {
   border-radius: 15px;
 }
 
-#video {
-  max-width: 900px;
-  height: auto;
+.chakra-link:focus {
+  box-shadow: none !important;
 }
 
+.chakra-link:hover {
+  text-decoration: none !important;
+}
+
+.home-video {
+  max-width: 800px;
+  position: absolute;
+}
 /* .vertical-timeline.vertical-timeline--two-columns:before {
   background: #002a44;
 } */
@@ -70,5 +77,10 @@ html {
   #video {
     max-width: 100%;
     height: auto;
+  }
+
+  .home-video {
+    max-width: 70%;
+    position: absolute;
   }
 }
