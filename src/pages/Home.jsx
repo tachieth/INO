@@ -22,13 +22,11 @@ export default function Home({ data, onConnect, address, onMint }) {
       <Flex
         alignItems="center"
         justifyContent="center"
-        minH={{ base: '100vh', md: '100vh' }}
+        minH={{ base: 'calc(100vh - 118px)', md: 'calc(100vh - 155px)' }}
         position="relative"
         w="100%"
-        py="20px"
         flexDirection="column"
       >
-        <Header onConnect={onConnect} address={address} />
         <Flex
           h={{ base: 'calc(100vh - 118px)', md: '100%' }}
           maxW="1200px"
@@ -42,7 +40,12 @@ export default function Home({ data, onConnect, address, onMint }) {
             <source src="/homepage_video.mp4" type="video/mp4" />
           </video>
           {!playing && (
-            <Image onClick={handleClick} cursor="pointer" position="absolute" src="images/videoplayer_icon.png" />
+            <Image
+              onClick={handleClick}
+              cursor="pointer"
+              position="absolute"
+              src="images/videoplayer_icon.png"
+            />
           )}
         </Flex>
         {/* <Flex

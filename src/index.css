@@ -54,6 +54,15 @@ html {
   max-width: 800px;
   position: absolute;
 }
+
+.chakra-accordion__button:focus {
+  box-shadow: none !important;
+}
+
+.chakra-accordion__button:hover {
+  background: transparent !important;
+}
+
 /* .vertical-timeline.vertical-timeline--two-columns:before {
   background: #002a44;
 } */

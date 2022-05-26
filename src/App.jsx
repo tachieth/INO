@@ -1,16 +1,17 @@
-import {useCallback, useEffect} from 'react';
+import { useCallback, useEffect } from 'react';
 import { theme, extendTheme, ChakraProvider, Box } from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import WalletConnectProvider from '@walletconnect/web3-provider';
-import '@fontsource/space-grotesk'; 
+import '@fontsource/space-grotesk';
 import { providers, Contract } from 'ethers';
 import WalletLink from 'walletlink';
 import Web3Modal from 'web3modal';
+import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 
-import {Header, Footer } from './components';
-import { Home} from './pages';
+import { Header, Footer } from './components';
+import { Home, E1 } from './pages';
 import {
   connectRequest,
   connectSuccess,
@@ -77,7 +78,7 @@ function App() {
     } catch (err) {
       console.log(err.message);
       dispatch(connectFailed(err.message));
-    };
+    }
   }, []);
 
   const {
@@ -157,22 +158,38 @@ function App() {
 
   return (
     <ChakraProvider theme={extendedTheme}>
-      <Box
-        minH="100vh"
-        bg="#FEFAEF">
-        <Box>
-          <Home
-            onConnect={connect}
-            address={address}
-            data={data}
-            // onMint={claimNFTs}
-            loading={blockchainLoading || data.loading}
-          />
-        </Box>
-      </Box>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout onConnect={connect} address={address} />}>
+            <Route
+              path="/"
+              element={
+                <Home
+                  onConnect={connect}
+                  address={address}
+                  data={data}
+                  loading={blockchainLoading || data.loading}
+                />
+              }
+            />
+            <Route path="/e1" element={<E1 />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
       <ToastContainer />
     </ChakraProvider>
   );
 }
+
+const Layout = ({ connect, address }) => {
+  return (
+    <Box minH="100vh" bg="#FEFAEF">
+      <Box>
+        <Header onConnect={connect} address={address} />
+        <Outlet />
+      </Box>
+    </Box>
+  );
+};
 
 export default App;

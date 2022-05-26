@@ -14,6 +14,7 @@ import {
   Heading,
 } from '@chakra-ui/react';
 import { HiMenu } from 'react-icons/hi';
+import { Link as RouteLink } from 'react-router-dom';
 import { SiDiscord } from 'react-icons/si';
 import { AiOutlineInstagram } from 'react-icons/ai';
 import { AiOutlineTwitter } from 'react-icons/ai';
@@ -26,12 +27,12 @@ export default function Header({ address, onConnect }) {
 
   return (
     <>
-      <Box pb="20px" w="100%" position="relative" zIndex="5">
+      <Box py="20px" w="100%" position="relative" zIndex="5">
         <Flex
           // py="10px"
           // borderBottomWidth={{ base: '0', md: '1px' }}
           maxW="1200px"
-          px="10px"
+          // px="10px"
           mx="auto"
           justifyContent="space-between"
           alignItems="center"
@@ -49,34 +50,31 @@ export default function Header({ address, onConnect }) {
           <Flex alignItems="center" justifyContent="center">
             {' '}
             <Flex fontSize="17px" display={{ base: 'none', md: 'flex' }}>
-              <Link
-                backgroundImage="/images/home.png"
-                backgroundPosition="center"
-                backgroundRepeat="no-repeat"
-                backgroundSize="100%"
-                p="20px"
-                href="#about"
-                // mr="10px"
-                color="white"
-              >
-                HOME
-              </Link>
-
-              <Link
-                backgroundImage="/images/e1.png"
-                backgroundPosition="center"
-                backgroundRepeat="no-repeat"
-                backgroundSize="100%"
-                p="20px"
-                href="#about"
-                // h="10px"
-                display="block"
-                // mr="30px"
-                color="white"
-              >
-                E1
-              </Link>
-
+              <RouteLink to="/">
+                <Box
+                  backgroundImage="/images/home.png"
+                  backgroundPosition="center"
+                  backgroundRepeat="no-repeat"
+                  backgroundSize="100%"
+                  p="20px"
+                  color="white"
+                >
+                  HOME
+                </Box>
+              </RouteLink>
+              <RouteLink to="/e1">
+                <Box
+                  backgroundImage="/images/e1.png"
+                  backgroundPosition="center"
+                  backgroundRepeat="no-repeat"
+                  backgroundSize="100%"
+                  p="20px"
+                  display="block"
+                  color="white"
+                >
+                  E1
+                </Box>
+              </RouteLink>
               <Link
                 backgroundImage="/images/galler.png"
                 backgroundPosition="center"
