@@ -51,7 +51,7 @@ html {
 }
 
 .home-video {
-  max-width: 800px;
+  max-width: 1000px;
   position: absolute;
 }
 
@@ -61,6 +61,22 @@ html {
 
 .chakra-accordion__button:hover {
   background: transparent !important;
+}
+
+.detail-box {
+  background: #095f69ba;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.detail-box:hover {
+  background: #095f69;
+}
+
+.mainifesto-video img {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* .vertical-timeline.vertical-timeline--two-columns:before {

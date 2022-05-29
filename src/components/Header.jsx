@@ -49,7 +49,7 @@ export default function Header({ address, onConnect }) {
 
           <Flex alignItems="center" justifyContent="center">
             {' '}
-            <Flex fontSize="17px" display={{ base: 'none', md: 'flex' }}>
+            <Flex alignItems="center" fontSize="17px" display={{ base: 'none', md: 'flex' }}>
               <RouteLink to="/">
                 <Box
                   backgroundImage="/images/home.png"
@@ -75,32 +75,34 @@ export default function Header({ address, onConnect }) {
                   E1
                 </Box>
               </RouteLink>
-              <Link
-                backgroundImage="/images/galler.png"
-                backgroundPosition="center"
-                backgroundRepeat="no-repeat"
-                backgroundSize="100%"
-                p="20px"
-                href="#about"
-                // mr="30px"
-                color="white"
-              >
-                EVA MAP
-              </Link>
-              <Flex
-                alignItems="center"
-                justifyContent="center"
-                backgroundImage="/images/galler.png"
-                backgroundPosition="center"
-                backgroundRepeat="no-repeat"
-                backgroundSize="100%"
-                p="10px"
-                href="#about"
-                // mr="30px"
-                color="white"
-              >
-                <Text textAlign="center"> MANIFESTO</Text>
-              </Flex>
+              <RouteLink to="/evamap">
+                <Box
+                  backgroundImage="/images/galler.png"
+                  backgroundPosition="center"
+                  backgroundRepeat="no-repeat"
+                  backgroundSize="100%"
+                  p="20px"
+                  // mr="30px"
+                  color="white"
+                >
+                  EVA MAP
+                </Box>
+              </RouteLink>
+              <RouteLink to="/mainifesto">
+                <Box
+                  // alignItems="center"
+                  // justifyContent="center"
+                  backgroundImage="/images/galler.png"
+                  backgroundPosition="center"
+                  backgroundRepeat="no-repeat"
+                  backgroundSize="100%"
+                  p="10px"
+                  // mr="30px"
+                  color="white"
+                >
+                  MANIFESTO
+                </Box>
+              </RouteLink>
               <Link
                 backgroundImage="/images/galler.png"
                 backgroundPosition="center"
@@ -185,7 +187,7 @@ export default function Header({ address, onConnect }) {
             onClick={onOpen}
             display={{ base: 'block', md: 'none' }}
           >
-            <HiMenu color="#096069" size="30" />
+            <HiMenu color="primary" size="30" />
           </Box>
         </Flex>
       </Box>

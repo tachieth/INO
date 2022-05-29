@@ -137,7 +137,7 @@ export default function Footer() {
           pb="20px"
         >
           {' '}
-          <Text color="bgLight" mb={{ base: '15px', md: 0 }}>
+          <Text mb={{ base: '15px', md: 0 }}>
             &copy; {new Date().getFullYear()} ISLAND NFT. All rights reserved.
           </Text>
           <Text color="white">Terms & Conditions</Text>

@@ -11,7 +11,7 @@ import Web3Modal from 'web3modal';
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 
 import { Header, Footer } from './components';
-import { Home, E1 } from './pages';
+import { Home, E1, EvaMap, Mainifesto } from './pages';
 import {
   connectRequest,
   connectSuccess,
@@ -33,13 +33,8 @@ const extendedTheme = extendTheme({
   },
   colors: {
     ...theme.colors,
-    bgLight: '#efeee8',
-    blue: '#00aeee',
-    red: '#d54d9e',
-    green: '#018b44',
-    purple: '#8d51a2',
-    darkGreen: '#EFFAFF',
     text: '#EFFAFF',
+    primary: '#096069',
   },
 });
 
@@ -173,6 +168,8 @@ function App() {
               }
             />
             <Route path="/e1" element={<E1 />} />
+            <Route path="/evamap" element={<EvaMap />} />
+            <Route path="/mainifesto" element={<Mainifesto />} />
           </Route>
         </Routes>
       </BrowserRouter>

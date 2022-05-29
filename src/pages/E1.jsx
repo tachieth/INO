@@ -56,8 +56,8 @@ export default function E1() {
           w="100%"
           flexDirection="column"
         >
-          <Box borderBottomWidth="2px" borderColor="#096069">
-            <Heading mb="20px" fontWeight="bold" fontSize="75px" color="#096069">
+          <Box borderBottomWidth="2px" borderColor="primary">
+            <Heading mb="20px" fontWeight="bold" fontSize="75px" color="primary">
               PLANET E1
             </Heading>
           </Box>
@@ -74,7 +74,7 @@ export default function E1() {
               mb={{ base: '20px', md: '0' }}
               h="260px"
               w="260px"
-              bg="#096069"
+              bg="primary"
             >
               <Image src={`https://source.unsplash.com/random/260x260?sig=299`} w="100%" />
             </Box>
@@ -84,7 +84,7 @@ export default function E1() {
               mb={{ base: '20px', md: '0' }}
               h="260px"
               w="260px"
-              bg="#096069"
+              bg="primary"
             >
               <Image src={`https://source.unsplash.com/random/260x260?sig=500`} w="100%" />
             </Box>
@@ -94,7 +94,7 @@ export default function E1() {
               mb={{ base: '20px', md: '0' }}
               h="260px"
               w="260px"
-              bg="#096069"
+              bg="primary"
             >
               <Image src={`https://source.unsplash.com/random/260x260?sig=124`} w="100%" />
             </Box>
@@ -104,7 +104,7 @@ export default function E1() {
               mb={{ base: '0', md: '0' }}
               h="260px"
               w="260px"
-              bg="#096069"
+              bg="primary"
             >
               <Image src={`https://source.unsplash.com/random/260x260?sig=134`} w="100%" />
             </Box>
@@ -121,7 +121,7 @@ export default function E1() {
               mb={{ base: '20px', md: '0' }}
               h="260px"
               w={{ base: '350px', md: '570px' }}
-              bg="#096069"
+              bg="primary"
               as="button"
               onClick={() => {}}
             >
@@ -131,13 +131,13 @@ export default function E1() {
               mb={{ base: '20px', md: '0' }}
               h="260px"
               w="260px"
-              bg="#096069"
+              bg="primary"
               as="button"
               onClick={() => {}}
             >
               <Image src={`https://source.unsplash.com/random/260x260?sig=1442`} w="100%" />
             </Box>
-            <Box h="260px" w="260px" bg="#096069" as="button" onClick={() => {}}>
+            <Box h="260px" w="260px" bg="primary" as="button" onClick={() => {}}>
               <Image src={`https://source.unsplash.com/random/260x260?sig=14`} w="100%" />
             </Box>
           </Flex>
@@ -149,7 +149,7 @@ export default function E1() {
             justifyContent="space-between"
             alignItems="center"
           >
-            <Box h="260px" w="1200px" bg="#096069" as="button" onClick={() => {}}>
+            <Box h="260px" w="1200px" bg="primary" as="button" onClick={() => {}}>
               <Image src={`https://source.unsplash.com/random/1200x300?sig=122`} w="100%" />
             </Box>
           </Flex>
@@ -157,7 +157,7 @@ export default function E1() {
       </Flex>
 
       <Flex
-        bg="#096069"
+        bg="primary"
         minH={{ base: '100vh', md: '100vh' }}
         position="relative"
         w="100%"
@@ -253,15 +253,15 @@ export default function E1() {
           w="100%"
           flexDirection="column"
         >
-          <Box pt="80px" borderBottomWidth="2px" borderColor="#096069">
-            <Heading mb="20px" fontWeight="bold" fontSize="75px" color="#096069">
+          <Box pt="80px" borderBottomWidth="2px" borderColor="primary">
+            <Heading mb="20px" fontWeight="bold" fontSize="75px" color="primary">
               FAQ
             </Heading>
           </Box>
           <Box py="50px" maxW="90%" mx="auto" w="100%" px={{ base: '20px', md: 0 }}>
             <Accordion allowMultiple allowToggle>
               {data.map((faq) => (
-                <AccordionItem key={faq.title} bg="#096069" borderRadius="20px" mb="20px" px="40px">
+                <AccordionItem key={faq.title} bg="primary" borderRadius="20px" mb="20px" px="40px">
                   <h2>
                     <AccordionButton h="70px">
                       <Box flex="1" textAlign="left">
