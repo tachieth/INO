@@ -6,7 +6,9 @@ import { TeamModal, BoxModal } from '../components';
 
 export default function EvaMap() {
   const [teamModal, setTeamModal] = React.useState(false)
+  const [teamModalType, setTeamModalType] = React.useState('')
   const [boxModal, setBoxModal] = React.useState(false)
+  const [boxModalType, setBoxModalType] = React.useState('')
   return (
     <>
       <Box maxW="1200px" mx="auto" w="100%" pb="50px">
@@ -24,7 +26,10 @@ export default function EvaMap() {
             className="detail-box"
             borderRadius="10px"
             mb="20px"
-            onClick={() => setBoxModal(true)}
+            onClick={() => {
+              setBoxModalType('CORE VALUES');
+              setBoxModal(true);
+            }}
           >
             <Text fontSize="4xl" color="white">
               CORE VALUES
@@ -38,7 +43,10 @@ export default function EvaMap() {
             className="detail-box"
             borderRadius="10px"
             mb="20px"
-            onClick={() => setBoxModal(true)}
+            onClick={() => {
+              setBoxModalType('BRAND');
+              setBoxModal(true);
+            }}
           >
             <Text fontSize="4xl" color="white">
               BRAND
@@ -52,7 +60,10 @@ export default function EvaMap() {
             className="detail-box"
             borderRadius="10px"
             mb="20px"
-            onClick={() => setBoxModal(true)}
+            onClick={() => {
+              setBoxModalType('PHYSICAL WORLD');
+              setBoxModal(true);
+            }}
           >
             <Text fontSize="4xl" color="white">
               PHYSICAL WORLD
@@ -66,7 +77,10 @@ export default function EvaMap() {
             className="detail-box"
             borderRadius="10px"
             mb="20px"
-            onClick={() => setBoxModal(true)}
+            onClick={() => {
+              setBoxModalType('PHYSICAL WORLD');
+              setBoxModal(true);
+            }}
           >
             <Text fontSize="4xl" color="white">
               BRIDGE
@@ -80,7 +94,10 @@ export default function EvaMap() {
             className="detail-box"
             borderRadius="10px"
             mb="20px"
-            onClick={() => setBoxModal(true)}
+            onClick={() => {
+              setBoxModalType('ROOTS');
+              setBoxModal(true);
+            }}
           >
             <Text fontSize="4xl" color="white">
               ROOTS
@@ -94,7 +111,10 @@ export default function EvaMap() {
             className="detail-box"
             borderRadius="10px"
             mb="20px"
-            onClick={() => setBoxModal(true)}
+            onClick={() => {
+              setBoxModalType('CONNECT');
+              setBoxModal(true);
+            }}
           >
             <Text fontSize="4xl" color="white">
               CONNECT
@@ -116,7 +136,10 @@ export default function EvaMap() {
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
-                onClick={() => setTeamModal(true)}
+                onClick={() => {
+                  setTeamModalType('PR');
+                  setTeamModal(true);
+                }}
               >
                 <Text color="white" fontSize="4xl">
                   PR
@@ -130,7 +153,10 @@ export default function EvaMap() {
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
-                onClick={() => setTeamModal(true)}
+                onClick={() => {
+                  setTeamModalType('MARKETING');
+                  setTeamModal(true);
+                }}
               >
                 <Text color="white" fontSize="4xl">
                   MARKETING
@@ -144,7 +170,10 @@ export default function EvaMap() {
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
-                onClick={() => setTeamModal(true)}
+                onClick={() => {
+                  setTeamModalType('ART');
+                  setTeamModal(true);
+                }}
               >
                 <Text color="white" fontSize="4xl">
                   ART
@@ -158,7 +187,10 @@ export default function EvaMap() {
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
-                onClick={() => setTeamModal(true)}
+                onClick={() => {
+                  setTeamModalType('DEV');
+                  setTeamModal(true);
+                }}
               >
                 <Text color="white" fontSize="4xl">
                   DEV
@@ -172,7 +204,10 @@ export default function EvaMap() {
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
-                onClick={() => setTeamModal(true)}
+                onClick={() => {
+                  setTeamModalType('COMMUNITY');
+                  setTeamModal(true);
+                }}
               >
                 <Text color="white" fontSize="4xl">
                   COMMUNITY
@@ -182,8 +217,24 @@ export default function EvaMap() {
           </Box>
         </Box>
       </Box>
-      {teamModal && <TeamModal onClose={() => setTeamModal(false)} />}
-      {boxModal && <BoxModal onClose={() => setBoxModal(false)} />}
+      {teamModal && (
+        <TeamModal
+          type={teamModalType}
+          onClose={() => {
+            setTeamModalType('');
+            setTeamModal(false);
+          }}
+        />
+      )}
+      {boxModal && (
+        <BoxModal
+          type={boxModalType}
+          onClose={() => {
+            setBoxModalType('');
+            setBoxModal(false);
+          }}
+        />
+      )}
     </>
   );
 }

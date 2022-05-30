@@ -1,7 +1,80 @@
-import { Box, Flex, Heading, Text, Image } from '@chakra-ui/react';
+import { Box, Flex, Heading, Text, Image, Link } from '@chakra-ui/react';
 import { AiOutlineClose } from 'react-icons/ai';
 
-export default function TeamModal({onClose}) {
+const data = {
+  PR: [
+    {
+      image: '1.png',
+      name: 'Moy',
+      twitter: 'https://twitter.com/moy_nft',
+    },
+  ],
+  ART: [
+    {
+      image: '1.png',
+      name: 'Motionscorp',
+      twitter: 'https://twitter.com/motionscorp',
+    },
+    {
+      image: '2.png',
+      name: 'Claire Tea',
+      twitter: 'https://twitter.com/KwentongI',
+    },
+    {
+      image: '3.png',
+      name: 'Yeezi',
+      twitter: 'https://twitter.com/yeezi_eth',
+    },
+  ],
+  MARKETING: [
+    {
+      image: '1.png',
+      name: 'Bubz',
+      twitter: 'https://twitter.com/thebubzlife',
+    },
+    {
+      image: '2.png',
+      name: 'Jamsboy',
+      twitter: 'https://twitter.com/jamsboooy',
+    },
+  ],
+  DEV: [
+    {
+      image: '1.png',
+      name: 'Tachi',
+      twitter: 'https://twitter.com/ETHTachi',
+    },
+    {
+      image: '2.png',
+      name: 'EVA Labs',
+      twitter: 'https://twitter.com/EVALabsLLC',
+    },
+  ],
+  COMMUNITY: [
+    {
+      image: '1.png',
+      name: 'Crush',
+      twitter: 'https://twitter.com/Crush_NFT_',
+    },
+    {
+      image: '2.png',
+      name: 'Curry',
+      twitter: 'https://twitter.com/MzzPeter',
+    },
+    {
+      image: '3.png',
+      name: 'InoCruncher',
+      twitter: 'https://twitter.com/InoCruncher',
+    },
+    {
+      image: '4.png',
+      name: 'Pengu',
+      twitter: 'https://twitter.com/PenguxnNFT',
+    },
+  ],
+};
+
+export default function TeamModal({onClose, type}) {
   return (
     <Flex
       bg="rgba(0, 0, 0, 0.5)"
@@ -27,7 +100,23 @@ export default function TeamModal({onClose}) {
           <AiOutlineClose size="25" />
         </Box>
         <Flex justifyContent="center" alignItems="center">
-          <Box textAlign="center" mr="20px" maxW="180px">
+          {data[type].map((user, i) => (
+            <Box
+              textAlign="center"
+              mr={i + 1 === data[type].length ? 0 : '20px'}
+              maxW="180px"
+              key={user.image}
+            >
+              <Image src={`/images/${user.image}`} maxW="180px" />
+              <Heading color="primary" fontSize="2xl" my="10px">
+                {user.name}
+              </Heading>
+              <Link href={user.twitter} isExternal>
+                <Text color="primary">@twitter</Text>
+              </Link>
+            </Box>
+          ))}
+          {/* <Box textAlign="center" mr="20px" maxW="180px">
             <Image src="/images/1.png" maxW="180px" />
             <Heading color="primary" fontSize="2xl" my="10px">
               User 1
@@ -54,7 +143,7 @@ export default function TeamModal({onClose}) {
               User 4
             </Heading>
             <Text color="primary">@twitter</Text>
-          </Box>
+          </Box> */}
         </Flex>
       </Flex>
     </Flex>

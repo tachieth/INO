@@ -29,16 +29,16 @@ export default function Home({ data, onConnect, address, onMint }) {
       >
         <Flex
           h={{ base: 'calc(100vh - 118px)', md: '100%' }}
-          // maxW="1200px"
-          // mx="auto"
+          maxW="1200px"
+          mx="auto"
           w="100%"
           alignItems="center"
           justifyContent="center"
-          position="fixed"
-          top="0"
-          left="0"
-          right="0"
-          bottom="0"
+          // position="fixed"
+          // top="0"
+          // left="0"
+          // right="0"
+          // bottom="0"
         >
           <Image src="images/bg.png" w="100%" opacity="30%" />
           <video className="home-video" ref={videoRef} onClick={handleClick} loop>
