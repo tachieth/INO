@@ -62,6 +62,18 @@ export default function Header({ address, onConnect }) {
                   HOME
                 </Box>
               </RouteLink>
+              <RouteLink to="/mint">
+                <Box
+                  backgroundImage="/images/mint.png"
+                  backgroundPosition="center"
+                  backgroundRepeat="no-repeat"
+                  backgroundSize="100%"
+                  p="25px"
+                  color="white"
+                >
+                  MINT
+                </Box>
+              </RouteLink>
               <RouteLink to="/e1">
                 <Box
                   backgroundImage="/images/e1.png"

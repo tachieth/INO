@@ -11,7 +11,7 @@ import Web3Modal from 'web3modal';
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 
 import { Header, Footer } from './components';
-import { Home, E1, EvaMap, Mainifesto } from './pages';
+import { Home, E1, EvaMap, Mainifesto, Mint } from './pages';
 import {
   connectRequest,
   connectSuccess,
@@ -170,6 +170,7 @@ function App() {
             <Route path="/e1" element={<E1 />} />
             <Route path="/evamap" element={<EvaMap />} />
             <Route path="/mainifesto" element={<Mainifesto />} />
+            <Route path="/mint" element={<Mint />} />
           </Route>
         </Routes>
       </BrowserRouter>
