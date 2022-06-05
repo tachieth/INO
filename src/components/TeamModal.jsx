@@ -4,70 +4,70 @@ import { AiOutlineClose } from 'react-icons/ai';
 const data = {
   PR: [
     {
-      image: '1.png',
+      image: 'Moy.png',
       name: 'Moy',
       twitter: 'https://twitter.com/moy_nft',
     },
   ],
   ART: [
     {
-      image: '1.png',
+      image: 'Motion.png',
       name: 'Motionscorp',
       twitter: 'https://twitter.com/motionscorp',
     },
     {
-      image: '2.png',
+      image: 'Claire.png',
       name: 'Claire Tea',
       twitter: 'https://twitter.com/KwentongI',
     },
     {
-      image: '3.png',
+      image: 'Yeezi.png',
       name: 'Yeezi',
       twitter: 'https://twitter.com/yeezi_eth',
     },
   ],
   MARKETING: [
     {
-      image: '1.png',
+      image: 'Bubz.png',
       name: 'Bubz',
       twitter: 'https://twitter.com/thebubzlife',
     },
     {
-      image: '2.png',
+      image: 'Jamsboy.png',
       name: 'Jamsboy',
       twitter: 'https://twitter.com/jamsboooy',
     },
   ],
   DEV: [
     {
-      image: '1.png',
+      image: 'Tachi.png',
       name: 'Tachi',
       twitter: 'https://twitter.com/ETHTachi',
     },
     {
-      image: '2.png',
+      image: 'EVA Labs.png',
       name: 'EVA Labs',
       twitter: 'https://twitter.com/EVALabsLLC',
     },
   ],
   COMMUNITY: [
     {
-      image: '1.png',
+      image: 'Crush.png',
       name: 'Crush',
       twitter: 'https://twitter.com/Crush_NFT_',
     },
     {
-      image: '2.png',
+      image: 'CurryD.png',
       name: 'Curry',
       twitter: 'https://twitter.com/MzzPeter',
     },
     {
-      image: '3.png',
+      image: 'InoCruncher.png',
       name: 'InoCruncher',
       twitter: 'https://twitter.com/InoCruncher',
     },
     {
-      image: '4.png',
+      image: 'Pengu.png',
       name: 'Pengu',
       twitter: 'https://twitter.com/PenguxnNFT',
     },

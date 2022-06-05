@@ -13,6 +13,8 @@ import {
 import { Header } from '../components';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 
+import GalleryModal from '../components/GalleryModal';
+
 const factions = new Array(5).fill(0).map((_, i) => i);
 
 const data = [
@@ -73,6 +75,7 @@ const factionData = [
 
 export default function E1() {
   const [activeFraction, setActiveFraction] = useState(0);
+  const [activeNum, setActiveNum] = useState(null);
   return (
     <>
       <Flex
@@ -104,17 +107,17 @@ export default function E1() {
           >
             <Box
               as="button"
-              onClick={() => {}}
               mb={{ base: '20px', md: '0' }}
               h="260px"
               w="260px"
               bg="primary"
+              onClick={() => setActiveNum(1)}
             >
               <Image src="/images/e1_img_1.png" w="100%" />
             </Box>
             <Box
               as="button"
-              onClick={() => {}}
+              onClick={() => setActiveNum(2)}
               mb={{ base: '20px', md: '0' }}
               h="260px"
               w="260px"
@@ -124,7 +127,7 @@ export default function E1() {
             </Box>
             <Box
               as="button"
-              onClick={() => {}}
+              onClick={() => setActiveNum(3)}
               mb={{ base: '20px', md: '0' }}
               h="260px"
               w="260px"
@@ -134,7 +137,7 @@ export default function E1() {
             </Box>
             <Box
               as="button"
-              onClick={() => {}}
+              onClick={() => setActiveNum(4)}
               mb={{ base: '0', md: '0' }}
               h="260px"
               w="260px"
@@ -157,7 +160,7 @@ export default function E1() {
               w={{ base: '350px', md: '570px' }}
               bg="primary"
               as="button"
-              onClick={() => {}}
+              onClick={() => setActiveNum(5)}
               overflow="hidden"
             >
               <Image src="/images/e1_img_5.png" w="100%" />
@@ -168,11 +171,11 @@ export default function E1() {
               w="260px"
               bg="primary"
               as="button"
-              onClick={() => {}}
+              onClick={() => setActiveNum(6)}
             >
               <Image src="/images/e1_img_6.png" w="100%" />
             </Box>
-            <Box h="260px" w="260px" bg="primary" as="button" onClick={() => {}}>
+            <Box h="260px" w="260px" bg="primary" as="button" onClick={() => setActiveNum(7)}>
               <Image src="/images/e1_img_7.png" w="100%" />
             </Box>
           </Flex>
@@ -190,7 +193,7 @@ export default function E1() {
               w="1200px"
               bg="primary"
               as="button"
-              onClick={() => {}}
+              onClick={() => setActiveNum(8)}
               overflow="hidden"
             >
               <Image src="/images/e1_img_8.png" w="100%" />
@@ -341,6 +344,7 @@ export default function E1() {
           </Box>
         </Flex>
       </Flex>
+      {activeNum && <GalleryModal onClose={() => setActiveNum(null)} activeImg={activeNum} />}
     </>
   );
 }

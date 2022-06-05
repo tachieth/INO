@@ -62,7 +62,7 @@ export default function Header({ address, onConnect }) {
                   HOME
                 </Box>
               </RouteLink>
-              <RouteLink to="/mint">
+              {/* <RouteLink to="/mint">
                 <Box
                   backgroundImage="/images/mint.png"
                   backgroundPosition="center"
@@ -73,7 +73,7 @@ export default function Header({ address, onConnect }) {
                 >
                   MINT
                 </Box>
-              </RouteLink>
+              </RouteLink> */}
               <RouteLink to="/e1">
                 <Box
                   backgroundImage="/images/e1.png"
@@ -115,33 +115,36 @@ export default function Header({ address, onConnect }) {
                   MANIFESTO
                 </Box>
               </RouteLink>
-              <Link
-                backgroundImage="/images/galler.png"
-                backgroundPosition="center"
-                backgroundRepeat="no-repeat"
-                backgroundSize="100%"
-                p="20px"
-                href="#about"
-                // mr="30px"
-                color="white"
-              >
-                GALLERY
-              </Link>
-              <Link
-                backgroundImage="/images/galler.png"
-                backgroundPosition="center"
-                backgroundRepeat="no-repeat"
-                backgroundSize="100%"
-                p="20px"
-                href="#about"
-                // mr="30px"
-                color="white"
-              >
-                CAREER
-              </Link>
+              <RouteLink to="/gallery">
+                <Box
+                  backgroundImage="/images/galler.png"
+                  backgroundPosition="center"
+                  backgroundRepeat="no-repeat"
+                  backgroundSize="100%"
+                  p="20px"
+                  // mr="30px"
+                  color="white"
+                >
+                  GALLERY
+                </Box>
+              </RouteLink>
+              <RouteLink to="/career">
+                <Box
+                  backgroundImage="/images/galler.png"
+                  backgroundPosition="center"
+                  backgroundRepeat="no-repeat"
+                  backgroundSize="100%"
+                  p="20px"
+                  // mr="30px"
+                  color="white"
+                >
+                  CAREER
+                </Box>
+              </RouteLink>
               <Flex>
                 {' '}
-                <Flex
+                <Link
+                  display="flex"
                   alignItems="center"
                   justifyContent="center"
                   backgroundImage="/images/twitter.png"
@@ -149,15 +152,15 @@ export default function Header({ address, onConnect }) {
                   backgroundRepeat="no-repeat"
                   backgroundSize="100%"
                   p="15px"
-                  href="#about"
+                  href="https://twitter.com/theprojectino"
                   // mr="30px"
                   color="black"
+                  isExternal
                 >
-                  <Link href="https://www.twitter.com/" isExternal>
-                    <Image maxW="17px" mx="auto" src="/images/twiterimage.png" />
-                  </Link>
-                </Flex>
-                <Flex
+                  <Image maxW="17px" mx="auto" src="/images/twiterimage.png" />
+                </Link>
+                <Link
+                  display="flex"
                   alignItems="center"
                   justifyContent="center"
                   backgroundImage="/images/discord.png"
@@ -165,15 +168,15 @@ export default function Header({ address, onConnect }) {
                   backgroundRepeat="no-repeat"
                   backgroundSize="100%"
                   p="15px"
-                  href="#about"
+                  href="https://discord.gg/evalabs"
                   // mr="30px"
                   color="black"
+                  isExternal
                 >
-                  <Link href="https://www.discord.com/" isExternal>
-                    <Image maxW="17px" mx="auto" src="/images/discord1.png" />
-                  </Link>
-                </Flex>
-                <Flex
+                  <Image maxW="17px" mx="auto" src="/images/discord1.png" />
+                </Link>
+                <Link
+                  display="flex"
                   alignItems="center"
                   justifyContent="center"
                   backgroundImage="/images/insta.png"
@@ -181,14 +184,13 @@ export default function Header({ address, onConnect }) {
                   backgroundRepeat="no-repeat"
                   backgroundSize="100%"
                   p="15px"
-                  href="#about"
+                  href="https://instagram.com/theprojectino?igshid=YmMyMTA2M2Y="
                   // mr="30px"
                   color="black"
+                  isExternal
                 >
-                  <Link href="https://www.instagram.com/" isExternal>
-                    <Image maxW="17px" mx="auto" src="/images/ig.png" />
-                  </Link>
-                </Flex>
+                  <Image maxW="17px" mx="auto" src="/images/ig.png" />
+                </Link>
               </Flex>
             </Flex>
           </Flex>

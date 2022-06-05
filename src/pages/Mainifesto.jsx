@@ -176,7 +176,12 @@ export default function Mainifesto() {
           <Link href="https://discord.gg/evalabs/" color="primary" isExternal mr="20px">
             <SiDiscord size="45" />
           </Link>
-          <Link href="https://www.instagram/theProjectINO/" color="primary" isExternal mr="20px">
+          <Link
+            href="https://instagram.com/theprojectino?igshid=YmMyMTA2M2Y="
+            color="primary"
+            isExternal
+            mr="20px"
+          >
             <AiFillInstagram size="45" />
           </Link>
           <Link href="https://evalabs.com/" color="primary" isExternal mr="20px">
