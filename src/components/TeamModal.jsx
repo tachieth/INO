@@ -1,12 +1,14 @@
 import { Box, Flex, Heading, Text, Image, Link } from '@chakra-ui/react';
 import { AiOutlineClose } from 'react-icons/ai';
 
+
 const data = {
   PR: [
     {
       image: 'Moy.png',
       name: 'Moy',
       twitter: 'https://twitter.com/moy_nft',
+      twitter_handle: '@moy_nft',
     },
   ],
   ART: [
@@ -14,16 +16,25 @@ const data = {
       image: 'Motion.png',
       name: 'Motionscorp',
       twitter: 'https://twitter.com/motionscorp',
+      twitter_handle: '@motionscorp',
     },
     {
       image: 'Claire.png',
       name: 'Claire Tea',
       twitter: 'https://twitter.com/KwentongI',
+      twitter_handle: '@KwentongI',
     },
     {
       image: 'Yeezi.png',
       name: 'Yeezi',
       twitter: 'https://twitter.com/yeezi_eth',
+      twitter_handle: '@yeezi_eth',
+    },
+    {
+      image: 'Bunkmotion.png',
+      name: 'Bunkmotion',
+      twitter: 'https://twitter.com/bunkmotion',
+      twitter_handle: '@bunkmotion',
     },
   ],
   MARKETING: [
@@ -31,11 +42,13 @@ const data = {
       image: 'Bubz.png',
       name: 'Bubz',
       twitter: 'https://twitter.com/thebubzlife',
+      twitter_handle: '@thebubzlife',
     },
     {
       image: 'Jamsboy.png',
       name: 'Jamsboy',
       twitter: 'https://twitter.com/jamsboooy',
+      twitter_handle: '@jamsboooy',
     },
   ],
   DEV: [
@@ -43,11 +56,13 @@ const data = {
       image: 'Tachi.png',
       name: 'Tachi',
       twitter: 'https://twitter.com/ETHTachi',
+      twitter_handle: '@ETHTachi',
     },
     {
       image: 'EVA Labs.png',
       name: 'EVA Labs',
       twitter: 'https://twitter.com/EVALabsLLC',
+      twitter_handle: '@EVALabsLLC',
     },
   ],
   COMMUNITY: [
@@ -55,21 +70,25 @@ const data = {
       image: 'Crush.png',
       name: 'Crush',
       twitter: 'https://twitter.com/Crush_NFT_',
+      twitter_handle: '@Crush_NFT_',
     },
     {
       image: 'CurryD.png',
       name: 'Curry',
       twitter: 'https://twitter.com/MzzPeter',
+      twitter_handle: '@MzzPeter',
     },
     {
       image: 'InoCruncher.png',
       name: 'InoCruncher',
       twitter: 'https://twitter.com/InoCruncher',
+      twitter_handle: '@InoCruncher',
     },
     {
       image: 'Pengu.png',
       name: 'Pengu',
       twitter: 'https://twitter.com/PenguxnNFT',
+      twitter_handle: '@PenguxnNFT',
     },
   ],
 };
@@ -86,6 +105,7 @@ export default function TeamModal({onClose, type}) {
       zIndex="999"
       justifyContent="center"
       alignItems="center"
+      onClick={onClose}
     >
       <Flex
         bg="white"
@@ -112,7 +132,7 @@ export default function TeamModal({onClose, type}) {
                 {user.name}
               </Heading>
               <Link href={user.twitter} isExternal>
-                <Text color="primary">@twitter</Text>
+                <Text color="primary">{user.twitter_handle}</Text>
               </Link>
             </Box>
           ))}

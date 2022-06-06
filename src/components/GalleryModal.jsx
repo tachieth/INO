@@ -13,6 +13,7 @@ export default function GalleryModal({ onClose, activeImg }) {
       zIndex="999"
       justifyContent="center"
       alignItems="center"
+      onClick={onClose}
     >
       <Flex
         bg="white"

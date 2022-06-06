@@ -104,6 +104,7 @@ export default function TeamModal({ onClose, type }) {
       zIndex="999"
       justifyContent="center"
       alignItems="center"
+      onClick={onClose}
     >
       <Flex
         bg="white"
