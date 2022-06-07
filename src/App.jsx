@@ -169,7 +169,7 @@ function App() {
             />
             <Route path="/e1" element={<E1 />} />
             <Route path="/evamap" element={<EvaMap />} />
-            <Route path="/mainifesto" element={<Mainifesto />} />
+            <Route path="/manifesto" element={<Mainifesto />} />
             <Route path="/mint" element={<Mint />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/career" element={<Career />} />

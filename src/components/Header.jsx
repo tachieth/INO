@@ -100,7 +100,7 @@ export default function Header({ address, onConnect }) {
                   EVA MAP
                 </Box>
               </RouteLink>
-              <RouteLink to="/mainifesto">
+              <RouteLink to="/manifesto">
                 <Box
                   // alignItems="center"
                   // justifyContent="center"
