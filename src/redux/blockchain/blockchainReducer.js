@@ -12,7 +12,7 @@ const initialState = {
   smartContract: null,
   web3: null,
   provider: null,
-  chainId: 4,
+  chainId: null,
   error: '',
 };
 

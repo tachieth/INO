@@ -19,9 +19,7 @@ import { SiDiscord } from 'react-icons/si';
 import { AiOutlineInstagram } from 'react-icons/ai';
 import { AiOutlineTwitter } from 'react-icons/ai';
 
-import { shortenAddress } from '../candy-machine';
-
-export default function Header({ address, onConnect }) {
+export default function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [placement] = React.useState('right');
 
@@ -373,37 +371,6 @@ export default function Header({ address, onConnect }) {
                 </Flex>
               </Flex>
             </Box>
-
-            {/* {!address ? (
-              <Flex
-                className="mobile-btn"
-                as="button"
-                mt="30px"
-                bg="white"
-                width="200px"
-                h="40px"
-                fontWeight="bold"
-                color="black"
-                borderRadius="5px"
-                justifyContent="center"
-                alignItems="center"
-                borderWidth="2px"
-                borderColor="black"
-                onClick={onConnect}
-              >
-                CONNECT
-              </Flex>
-            ) : (
-              <Box
-                fontWeight="bold"
-                bgGradient="linear(to-r, #FE9C28, #FADB37)"
-                px="20px"
-                py="10px"
-                borderRadius="25px"
-              >
-                <Text color="black">{shortenAddress(address || '')}</Text>
-              </Box>
-            )} */}
           </DrawerBody>
         </DrawerContent>
       </Drawer>

@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
-import { Box, Flex, Image } from '@chakra-ui/react';
-import { Header } from '../components';
+import { Flex, Image } from '@chakra-ui/react';
 
-export default function Home({ data, onConnect, address, onMint }) {
+export default function Home() {
   let videoRef = React.useRef(null);
   const [playing, setPlaying] = useState(false)
 
@@ -34,11 +33,6 @@ export default function Home({ data, onConnect, address, onMint }) {
           w="100%"
           alignItems="center"
           justifyContent="center"
-          // position="fixed"
-          // top="0"
-          // left="0"
-          // right="0"
-          // bottom="0"
         >
           <Image src="images/bg.png" w="100%" opacity="30%" />
           <video className="home-video" ref={videoRef} onClick={handleClick} loop>
@@ -53,21 +47,6 @@ export default function Home({ data, onConnect, address, onMint }) {
             />
           )}
         </Flex>
-        {/* <Flex
-          display={{ base: 'flex', md: 'none' }}
-          h="calc(100vh - 118px)"
-          maxW="1200px"
-          mx="auto"
-          w="100%"
-          alignItems="center"
-          justifyContent="center"
-        >
-          <Image w="100%" opacity="30%" src="images/bg.png" />
-          <video className="home-video">
-            <source src="/homepage_video.mp4" type="video/mp4" />
-          </video>
-          <Image position="absolute" src="images/videoplayer_icon.png" />
-        </Flex> */}
       </Flex>
     </>
   );
