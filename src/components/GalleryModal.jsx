@@ -10,25 +10,37 @@ export default function GalleryModal({ onClose, activeImg }) {
       left="0"
       right="0"
       bottom="0"
-      zIndex="999"
+      zIndex="998"
       justifyContent="center"
       alignItems="center"
-      onClick={onClose}
+      px={{ base: '20px', md: '0' }}
     >
+      <Box
+        position="absolute"
+        top="0"
+        left="0"
+        right="0"
+        bottom="0"
+        w="100%"
+        h="100%"
+        onClick={onClose}
+      ></Box>
       <Flex
         bg="white"
-        maxW="800px"
+        maxW={{ base: '100%', md: '600px', lg: '800px' }}
         w="100%"
-        h="550px"
+        h={{ base: '600px', md: '550px' }}
         justifyContent="center"
         alignItems="center"
         position="relative"
         overflow="hidden"
+        p={{ base: '10px', md: 0 }}
+        zIndex="999"
       >
         <Box position="absolute" right="20px" top="20px" as="button" onClick={onClose}>
           <AiOutlineClose size="25" />
         </Box>
-        <Image src={`/images/e1_img_${activeImg}.png`} maxW="500px" />
+        <Image src={`/images/e1_img_${activeImg}.png`} maxW={{ base: '100%', md: '500px' }} />
       </Flex>
     </Flex>
   );

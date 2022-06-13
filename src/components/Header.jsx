@@ -62,7 +62,7 @@ export default function Header({ address, onConnect }) {
                   HOME
                 </Box>
               </RouteLink>
-              {/* <RouteLink to="/mint">
+              <RouteLink to="/mint">
                 <Box
                   backgroundImage="/images/mint.png"
                   backgroundPosition="center"
@@ -73,7 +73,7 @@ export default function Header({ address, onConnect }) {
                 >
                   MINT
                 </Box>
-              </RouteLink> */}
+              </RouteLink>
               <RouteLink to="/e1">
                 <Box
                   backgroundImage="/images/e1.png"
@@ -200,8 +200,9 @@ export default function Header({ address, onConnect }) {
             p="2"
             onClick={onOpen}
             display={{ base: 'block', md: 'none' }}
+            color="primary"
           >
-            <HiMenu color="primary" size="30" />
+            <HiMenu size="30" />
           </Box>
         </Flex>
       </Box>
@@ -226,89 +227,100 @@ export default function Header({ address, onConnect }) {
               fontSize="17px"
               display={{ base: 'block', md: 'none' }}
             >
-              <Link
-                backgroundImage="/images/home.png"
-                backgroundPosition="center"
-                backgroundRepeat="no-repeat"
-                backgroundSize="contain"
-                p="20px"
-                w="100px"
-                href="#about"
-                // mr="10px"
-                color="white"
-                display="block"
-              >
-                HOME
-              </Link>
-
-              <Link
-                backgroundImage="/images/e1.png"
-                backgroundPosition="center"
-                backgroundRepeat="no-repeat"
-                backgroundSize="contain"
-                p="20px"
-                display="block"
-                w="70px"
-                href="#about"
-                color="white"
-              >
-                E1
-              </Link>
-
-              <Link
-                backgroundImage="/images/galler.png"
-                backgroundPosition="center"
-                backgroundRepeat="no-repeat"
-                backgroundSize="contain"
-                p="20px"
-                href="#about"
-                display="block"
-                w="120px"
-                color="white"
-              >
-                EVA MAP
-              </Link>
-              <Link
-                alignItems="center"
-                justifyContent="center"
-                backgroundImage="/images/galler.png"
-                backgroundPosition="center"
-                backgroundRepeat="no-repeat"
-                backgroundSize="contain"
-                p="10px"
-                href="#about"
-                display="block"
-                w="120px"
-                color="white"
-              >
-                <Text textAlign="center"> MANIFESTO</Text>
-              </Link>
-              <Link
-                backgroundImage="/images/galler.png"
-                backgroundPosition="center"
-                backgroundRepeat="no-repeat"
-                backgroundSize="contain"
-                p="20px"
-                href="#about"
-                display="block"
-                w="120px"
-                color="white"
-              >
-                GALLERY
-              </Link>
-              <Link
-                backgroundImage="/images/galler.png"
-                backgroundPosition="center"
-                backgroundRepeat="no-repeat"
-                backgroundSize="contain"
-                p="20px"
-                href="#about"
-                display="block"
-                w="120px"
-                color="white"
-              >
-                CAREER
-              </Link>
+              <RouteLink to="/">
+                <Box
+                  backgroundImage="/images/home.png"
+                  backgroundPosition="center"
+                  backgroundRepeat="no-repeat"
+                  backgroundSize="contain"
+                  p="20px"
+                  w="100px"
+                  // mr="10px"
+                  color="white"
+                >
+                  HOME
+                </Box>
+              </RouteLink>
+              <RouteLink to="/mint">
+                <Box
+                  backgroundImage="/images/mint.png"
+                  backgroundPosition="center"
+                  backgroundRepeat="no-repeat"
+                  backgroundSize="contain"
+                  p="20px"
+                  w="100px"
+                  color="white"
+                >
+                  MINT
+                </Box>
+              </RouteLink>
+              <RouteLink to="/e1">
+                <Box
+                  backgroundImage="/images/e1.png"
+                  backgroundPosition="center"
+                  backgroundRepeat="no-repeat"
+                  backgroundSize="contain"
+                  p="20px"
+                  w="70px"
+                  color="white"
+                >
+                  E1
+                </Box>
+              </RouteLink>
+              <RouteLink to="/evamap">
+                <Box
+                  backgroundImage="/images/galler.png"
+                  backgroundPosition="center"
+                  backgroundRepeat="no-repeat"
+                  backgroundSize="contain"
+                  p="20px"
+                  w="120px"
+                  color="white"
+                >
+                  EVA MAP
+                </Box>
+              </RouteLink>
+              <RouteLink to="/manifesto">
+                <Box
+                  alignItems="center"
+                  justifyContent="center"
+                  backgroundImage="/images/galler.png"
+                  backgroundPosition="center"
+                  backgroundRepeat="no-repeat"
+                  backgroundSize="contain"
+                  p="10px"
+                  w="120px"
+                  color="white"
+                >
+                  <Text textAlign="center"> MANIFESTO</Text>
+                </Box>
+              </RouteLink>
+              <RouteLink to="/gallery">
+                <Box
+                  backgroundImage="/images/galler.png"
+                  backgroundPosition="center"
+                  backgroundRepeat="no-repeat"
+                  backgroundSize="contain"
+                  p="20px"
+                  w="120px"
+                  color="white"
+                >
+                  GALLERY
+                </Box>
+              </RouteLink>
+              <RouteLink to="/career">
+                <Box
+                  backgroundImage="/images/galler.png"
+                  backgroundPosition="center"
+                  backgroundRepeat="no-repeat"
+                  backgroundSize="contain"
+                  p="20px"
+                  w="120px"
+                  color="white"
+                >
+                  CAREER
+                </Box>
+              </RouteLink>
               <Flex>
                 {' '}
                 <Flex
@@ -323,7 +335,7 @@ export default function Header({ address, onConnect }) {
                   // mr="30px"
                   color="black"
                 >
-                  <Link href="https://www.twitter.com/" isExternal>
+                  <Link href="https://twitter.com/theprojectino" isExternal>
                     <Image maxW="17px" mx="auto" src="/images/twiterimage.png" />
                   </Link>
                 </Flex>
@@ -339,7 +351,7 @@ export default function Header({ address, onConnect }) {
                   // mr="30px"
                   color="black"
                 >
-                  <Link href="https://www.discord.com/" isExternal>
+                  <Link href="https://discord.gg/evalabs" isExternal>
                     <Image maxW="17px" mx="auto" src="/images/discord1.png" />
                   </Link>
                 </Flex>
@@ -355,7 +367,7 @@ export default function Header({ address, onConnect }) {
                   // mr="30px"
                   color="black"
                 >
-                  <Link href="https://www.instagram.com/" isExternal>
+                  <Link href="https://instagram.com/theprojectino?igshid=YmMyMTA2M2Y=" isExternal>
                     <Image maxW="17px" mx="auto" src="/images/ig.png" />
                   </Link>
                 </Flex>

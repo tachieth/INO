@@ -11,16 +11,16 @@ export default function EvaMap() {
   const [boxModalType, setBoxModalType] = React.useState('')
   return (
     <>
-      <Box maxW="1200px" mx="auto" w="100%" pb="50px">
-        <Heading color="primary" fontSize="8xl">
+      <Box maxW="1200px" mx="auto" w="100%" pb="50px" px={{ base: '20px', md: '0' }}>
+        <Heading color="primary" fontSize={{ base: '35px', md: '75px', lg: '8xl' }}>
           EVA MAP
         </Heading>
         <Box w="100%" h="3px" bg="primary" opacity="0.8" mt="20px" mb="40px"></Box>
         <Image src="/images/tree.png" />
-        <Box w="100%" mt="150px">
+        <Box w="100%" mt={{ base: '50px', md: '150px' }}>
           <Flex
             w="100%"
-            h="150px"
+            h={{ base: '80px', md: '150px' }}
             justifyContent="center"
             alignItems="center"
             className="detail-box"
@@ -31,13 +31,13 @@ export default function EvaMap() {
               setBoxModal(true);
             }}
           >
-            <Text fontSize="4xl" color="white">
+            <Text fontSize={{ base: '2xl', md: '4xl' }} color="white">
               CORE VALUES
             </Text>
           </Flex>
           <Flex
             w="100%"
-            h="150px"
+            h={{ base: '80px', md: '150px' }}
             justifyContent="center"
             alignItems="center"
             className="detail-box"
@@ -48,13 +48,13 @@ export default function EvaMap() {
               setBoxModal(true);
             }}
           >
-            <Text fontSize="4xl" color="white">
+            <Text fontSize={{ base: '2xl', md: '4xl' }} color="white">
               BRAND
             </Text>
           </Flex>
           <Flex
             w="100%"
-            h="150px"
+            h={{ base: '80px', md: '150px' }}
             justifyContent="center"
             alignItems="center"
             className="detail-box"
@@ -65,13 +65,13 @@ export default function EvaMap() {
               setBoxModal(true);
             }}
           >
-            <Text fontSize="4xl" color="white">
+            <Text fontSize={{ base: '2xl', md: '4xl' }} color="white">
               PHYSICAL WORLD
             </Text>
           </Flex>
           <Flex
             w="100%"
-            h="150px"
+            h={{ base: '80px', md: '150px' }}
             justifyContent="center"
             alignItems="center"
             className="detail-box"
@@ -82,13 +82,13 @@ export default function EvaMap() {
               setBoxModal(true);
             }}
           >
-            <Text fontSize="4xl" color="white">
+            <Text fontSize={{ base: '2xl', md: '4xl' }} color="white">
               BRIDGE
             </Text>
           </Flex>
           <Flex
             w="100%"
-            h="150px"
+            h={{ base: '80px', md: '150px' }}
             justifyContent="center"
             alignItems="center"
             className="detail-box"
@@ -99,13 +99,13 @@ export default function EvaMap() {
               setBoxModal(true);
             }}
           >
-            <Text fontSize="4xl" color="white">
+            <Text fontSize={{ base: '2xl', md: '4xl' }} color="white">
               ROOTS
             </Text>
           </Flex>
           <Flex
             w="100%"
-            h="150px"
+            h={{ base: '80px', md: '150px' }}
             justifyContent="center"
             alignItems="center"
             className="detail-box"
@@ -116,18 +116,22 @@ export default function EvaMap() {
               setBoxModal(true);
             }}
           >
-            <Text fontSize="4xl" color="white">
+            <Text fontSize={{ base: '2xl', md: '4xl' }} color="white">
               CONNECT
             </Text>
           </Flex>
         </Box>
-        <Box mt="80px">
-          <Heading color="primary" fontSize="8xl">
+        <Box mt={{ base: '50px', md: '80px' }}>
+          <Heading color="primary" fontSize={{ base: '35px', md: '75px', lg: '8xl' }}>
             TEAM
           </Heading>
           <Box w="100%" h="3px" bg="primary" opacity="0.8" mt="20px" mb="40px"></Box>
           <Box py="50px" maxW="500px" mx="auto">
-            <Grid templateRows="repeat(3, 120px)" templateColumns="repeat(3, 150px)" gap={8}>
+            <Grid
+              templateRows={{ base: 'repeat(3, 80px)', md: 'repeat(3, 120px)' }}
+              templateColumns={{ base: 'repeat(3, 90px)', md: 'repeat(3, 150px)' }}
+              gap={8}
+            >
               <GridItem
                 rowSpan={2}
                 colSpan={1}
@@ -141,7 +145,7 @@ export default function EvaMap() {
                   setTeamModal(true);
                 }}
               >
-                <Text color="white" fontSize="4xl">
+                <Text color="white" fontSize={{ base: '2xl', md: '4xl' }}>
                   PR
                 </Text>
               </GridItem>
@@ -158,7 +162,7 @@ export default function EvaMap() {
                   setTeamModal(true);
                 }}
               >
-                <Text color="white" fontSize="4xl">
+                <Text color="white" fontSize={{ base: '2xl', md: '4xl' }}>
                   MARKETING
                 </Text>
               </GridItem>
@@ -175,7 +179,7 @@ export default function EvaMap() {
                   setTeamModal(true);
                 }}
               >
-                <Text color="white" fontSize="4xl">
+                <Text color="white" fontSize={{ base: '2xl', md: '4xl' }}>
                   ART
                 </Text>
               </GridItem>
@@ -192,7 +196,7 @@ export default function EvaMap() {
                   setTeamModal(true);
                 }}
               >
-                <Text color="white" fontSize="4xl">
+                <Text color="white" fontSize={{ base: '2xl', md: '4xl' }}>
                   DEV
                 </Text>
               </GridItem>
@@ -209,7 +213,7 @@ export default function EvaMap() {
                   setTeamModal(true);
                 }}
               >
-                <Text color="white" fontSize="4xl">
+                <Text color="white" fontSize={{ base: '2xl', md: '4xl' }}>
                   COMMUNITY
                 </Text>
               </GridItem>

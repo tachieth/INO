@@ -101,25 +101,42 @@ export default function TeamModal({ onClose, type }) {
       left="0"
       right="0"
       bottom="0"
-      zIndex="999"
+      zIndex="998"
       justifyContent="center"
       alignItems="center"
-      onClick={onClose}
+      px={{ base: '20px', md: '0' }}
     >
+      <Box
+        position="absolute"
+        top="0"
+        left="0"
+        right="0"
+        bottom="0"
+        w="100%"
+        h="100%"
+        onClick={onClose}
+      ></Box>
       <Flex
         bg="white"
         maxW="1100px"
         w="100%"
-        h={type === 'BRAND' ? '650px' : '550px'}
+        maxH={{ base: '80%', md: '650px' }}
+        h={{ base: '100%', md: type === 'BRAND' ? '650px' : '550px' }}
         justifyContent="center"
         alignItems="center"
         position="relative"
+        zIndex="999"
+        overflow="scroll"
+        pt={{
+          base: type === 'BRAND' ? '350px' : type === 'CONNECT' ? 0 : '250px',
+          md: 0,
+        }}
       >
         <Box position="absolute" right="20px" top="20px" as="button" onClick={onClose}>
           <AiOutlineClose size="25" />
         </Box>
         <Flex flexDirection="column" px="30px" justifyContent="center" textAlign="left">
-          <Heading color="primary" fontSize="6xl" mb="20px">
+          <Heading color="primary" fontSize={{ base: '2xl', md: '6xl' }} mb="20px">
             {data[type].title}
           </Heading>
           {!!data[type]?.text1 && (

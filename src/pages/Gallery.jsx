@@ -26,9 +26,15 @@ export default function Gallery() {
         mx="auto"
         w="100%"
         flexDirection="column"
+        px={{ base: '20px', md: '0' }}
       >
         <Box borderBottomWidth="2px" borderColor="primary">
-          <Heading mb="20px" fontWeight="bold" fontSize="75px" color="primary">
+          <Heading
+            mb="20px"
+            fontWeight="bold"
+            fontSize={{ base: '35px', md: '76px' }}
+            color="primary"
+          >
             GALLERY
           </Heading>
         </Box>

@@ -9,6 +9,8 @@ import {
   Heading,
   Text,
   Image,
+  Grid,
+  GridItem,
 } from '@chakra-ui/react';
 import { Header } from '../components';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
@@ -85,6 +87,7 @@ export default function E1() {
         py="20px"
         flexDirection="column"
         pb="80px"
+        px={{ base: '20px', md: '0' }}
       >
         <Flex
           h={{ base: '100%', md: '100%' }}
@@ -94,16 +97,23 @@ export default function E1() {
           flexDirection="column"
         >
           <Box borderBottomWidth="2px" borderColor="primary">
-            <Heading mb="20px" fontWeight="bold" fontSize="75px" color="primary">
+            <Heading
+              mb="20px"
+              fontWeight="bold"
+              fontSize={{ base: '35px', md: '75px' }}
+              color="primary"
+            >
               PLANET E1
             </Heading>
           </Box>
+          {/* Desktop E1 */}
           <Flex
             flexDirection={{ base: 'column', md: 'row' }}
             py="40px"
             w="100%"
             justifyContent="space-between"
             alignItems="center"
+            display={{ base: 'none', lg: 'flex' }}
           >
             <Box
               as="button"
@@ -146,13 +156,14 @@ export default function E1() {
               <Image src="/images/e1_img_4.png" w="100%" />
             </Box>
           </Flex>
-
+          {/* Desktop E1 */}
           <Flex
             flexDirection={{ base: 'column', md: 'row' }}
             pb="10px"
             w="100%"
             justifyContent="space-between"
             alignItems="center"
+            display={{ base: 'none', lg: 'flex' }}
           >
             <Box
               mb={{ base: '20px', md: '0' }}
@@ -179,13 +190,14 @@ export default function E1() {
               <Image src="/images/e1_img_7.png" w="100%" />
             </Box>
           </Flex>
-
+          {/* Desktop E1 */}
           <Flex
             px={{ base: '20px', md: '0' }}
             py="30px"
             w="100%"
             justifyContent="space-between"
             alignItems="center"
+            display={{ base: 'none', lg: 'flex' }}
           >
             <Flex
               alignItems="center"
@@ -198,6 +210,34 @@ export default function E1() {
             >
               <Image src="/images/e1_img_8.png" w="100%" />
             </Flex>
+          </Flex>
+          <Flex justifyContent="center" mt="30px" display={{ base: 'flex', lg: 'none' }}>
+            <Grid templateRows="repeat(8, 160)" templateColumns="repeat(2, 160px)" gap={8}>
+              <GridItem rowSpan={1} colSpan={1} onClick={() => setActiveNum(8)}>
+                <Image src="/images/e1_img_8.png" w="100%" h="100%" />
+              </GridItem>
+              <GridItem rowSpan={1} colSpan={1} onClick={() => setActiveNum(7)}>
+                <Image src="/images/e1_img_7.png" w="100%" h="100%" />
+              </GridItem>
+              <GridItem rowSpan={1} colSpan={1} onClick={() => setActiveNum(6)}>
+                <Image src="/images/e1_img_6.png" w="100%" h="100%" />
+              </GridItem>
+              <GridItem rowSpan={1} colSpan={1} onClick={() => setActiveNum(5)}>
+                <Image src="/images/e1_img_5.png" w="100%" h="100%" />
+              </GridItem>
+              <GridItem rowSpan={1} colSpan={1} onClick={() => setActiveNum(2)}>
+                <Image src="/images/e1_img_2.png" w="100%" h="100%" />
+              </GridItem>
+              <GridItem rowSpan={1} colSpan={1} onClick={() => setActiveNum(4)}>
+                <Image src="/images/e1_img_4.png" w="100%" h="100%" />
+              </GridItem>
+              <GridItem rowSpan={1} colSpan={1} onClick={() => setActiveNum(3)}>
+                <Image src="/images/e1_img_3.png" w="100%" h="100%" />
+              </GridItem>
+              <GridItem rowSpan={1} colSpan={1} onClick={() => setActiveNum(1)}>
+                <Image src="/images/e1_img_1.png" w="100%" h="100%" />
+              </GridItem>
+            </Grid>
           </Flex>
         </Flex>
       </Flex>
@@ -218,7 +258,12 @@ export default function E1() {
           flexDirection="column"
         >
           <Box px={{ base: '20px', md: '0' }} pt={{ base: '0px', md: '50px' }}>
-            <Heading color="#FEFAEF" mb="20px" fontWeight="bold" fontSize="75px">
+            <Heading
+              color="#FEFAEF"
+              mb="20px"
+              fontWeight="bold"
+              fontSize={{ base: '35px', md: '75px' }}
+            >
               FACTIONS
             </Heading>
             <Text mb="20px" textAlign="justify" color="#FEFAEF">
@@ -237,7 +282,7 @@ export default function E1() {
           </Box>
 
           <Flex
-            flexDirection={{ base: 'column-reverse', md: 'row' }}
+            flexDirection={{ base: 'column', md: 'row' }}
             py="40px"
             justifyContent="space-between"
             w="100%"
@@ -247,6 +292,7 @@ export default function E1() {
               mr={{ base: '10px', md: '0' }}
               px={{ base: '20px', md: '0' }}
               flexDirection={{ base: 'row', md: 'column' }}
+              mb={{ base: '20px', md: '0' }}
             >
               {factions.map((faction) => (
                 <Box
@@ -275,22 +321,28 @@ export default function E1() {
                 alignItems="center"
                 key={index}
                 display={activeFraction === index ? 'flex' : 'none'}
+                px={{ base: '20px', md: '0' }}
               >
                 <Box
                   mb={{ base: '20px', md: '0' }}
                   borderRadius="20px"
-                  w={{ base: '250px', md: '350px' }}
+                  w={{ base: '150px', md: '350px' }}
                   bg="#FEFAEF"
                   overflow="hidden"
                   mr="30px"
                 >
                   <Image src={`/images/${faction.image}`} w="100%" />
                 </Box>
-                <Box maxW="550px">
-                  <Text color="white" fontWeight="bold" fontSize="24px" mb="10px">
+                <Box maxW={{ base: 'calc(100% - 150px)', md: '550px' }}>
+                  <Text
+                    color="white"
+                    fontWeight="bold"
+                    fontSize={{ base: '16px', md: '24px' }}
+                    mb="10px"
+                  >
                     {faction.name}
                   </Text>
-                  <Text color="white" fontSize="20px">
+                  <Text color="white" fontSize={{ base: '14px', md: '20px' }}>
                     {faction.description}
                   </Text>
                 </Box>
@@ -314,27 +366,34 @@ export default function E1() {
           mx="auto"
           w="100%"
           flexDirection="column"
+          px={{ base: '20px', md: '0' }}
         >
           <Box pt="80px" borderBottomWidth="2px" borderColor="primary">
             <Heading mb="20px" fontWeight="bold" fontSize="75px" color="primary">
               FAQ
             </Heading>
           </Box>
-          <Box py="50px" maxW="90%" mx="auto" w="100%" px={{ base: '20px', md: 0 }}>
+          <Box py="50px" maxW={{ base: '100%', md: '90%' }} mx="auto" w="100%">
             <Accordion allowMultiple allowToggle>
               {data.map((faq) => (
-                <AccordionItem key={faq.title} bg="primary" borderRadius="20px" mb="20px" px="40px">
+                <AccordionItem
+                  key={faq.title}
+                  bg="primary"
+                  borderRadius="20px"
+                  mb="20px"
+                  px={{ base: 0, md: '40px' }}
+                >
                   <h2>
-                    <AccordionButton h="70px">
+                    <AccordionButton minH="70px">
                       <Box flex="1" textAlign="left">
-                        <Heading fontSize="30px" color="#FEFAEF">
+                        <Heading fontSize={{ base: '18px', md: '30px' }} color="#FEFAEF">
                           {faq.title}
                         </Heading>
                       </Box>
                     </AccordionButton>
                   </h2>
                   <AccordionPanel>
-                    <Text fontSize="20px" color="#FEFAEF">
+                    <Text fontSize={{ base: '18px', md: '20px' }} color="#FEFAEF">
                       {faq.content}
                     </Text>
                   </AccordionPanel>
