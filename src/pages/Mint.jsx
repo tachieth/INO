@@ -162,6 +162,7 @@ export default function Mint() {
         updateAccountRequest({
           address: accounts[0],
         });
+        window.location.reload();
       };
 
       const handleChainChanged = (_hexChainId) => {
