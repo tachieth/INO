@@ -35,6 +35,14 @@ const web3Modal = new Web3Modal({
   providerOptions, // required
 });
 
+const mintState = {
+    0: "PAUSED",
+    1: "PUBLICRAFFLE",
+    2: "PUBLIC",
+    3: "INOLIST",
+    4: "FINAL"
+  }
+
 export default function Mint() {
   const [count, setCount] = React.useState(1);
   const [whitelist, setwhitelist] = useState([]);
@@ -119,6 +127,7 @@ export default function Mint() {
             saleActive,
             finalSaleActive,
             publicRaffle,
+            saleConfig: SaleConfig
           })
         );
       }
@@ -418,10 +427,10 @@ export default function Mint() {
 
   return (
     <Box maxW="1200px" mx="auto" w="100%" pb="50px" px={{ base: '20px', md: '0' }}>
-      <Heading color="primary" fontSize={{ base: '35px', md: '76px', lg: '8xl' }}>
+      <Heading color="primary" fontSize={{ base: '35px', md: '76px', lg: '6xl' }}>
         MINT YOUR INO{' '}
         <Box display="inline-block" opacity="0.8">
-          (PHASE X)
+          (PHASE {mintState[data.saleConfig]})
         </Box>
       </Heading>
       <Box w="100%" h="3px" bg="primary" opacity="0.8" mt="20px" mb="40px"></Box>
@@ -432,7 +441,7 @@ export default function Mint() {
           </Box>
           /10,000 REMAINING
         </Text>
-        <Image src="/images/mint_banner.jpeg" maxW={{ base: '100%', md: '500px' }} my="30px" />
+        <Image src="/images/mint_banner.png" maxW={{ base: '100%', md: '500px' }} my="30px" />
         <Text color="primary" fontSize={{ base: '20px', md: '32px' }} fontWeight="bold">
           HOW MANY INO DO YOU WANT TO MINT?
         </Text>
@@ -485,7 +494,7 @@ export default function Mint() {
               3
             </Text>
           </Flex>
-          <Flex
+          {/* <Flex
             as="button"
             opacity={Number(count) === 4 ? '1' : '0.8'}
             justifyContent="center"
@@ -516,7 +525,7 @@ export default function Mint() {
             <Text color="white" fontSize={{ base: '20px', md: '32px' }} fontWeight="bold">
               5
             </Text>
-          </Flex>
+          </Flex> */}
         </Flex>
         <Flex
           justifyContent="center"

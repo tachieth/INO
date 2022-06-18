@@ -11,6 +11,7 @@ const initialState = {
   presaleActive: false,
   finalSaleActive: false,
   publicRaffle: false,
+  saleConfig: 0,
   owner: null,
 };
 
