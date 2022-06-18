@@ -10,6 +10,7 @@ const initialState = {
   saleActive: false,
   presaleActive: false,
   finalSaleActive: false,
+  publicRaffle: false,
   owner: null,
 };
 
