@@ -48,6 +48,7 @@ export default function Mint() {
       setFetching(true);
       const response = await axios.get(VITE_WHITELIST_API);
       const data = response.data.data;
+      console.log(data);
       setwhitelist(data);
       setFetching(false);
     } catch (error) {
@@ -99,7 +100,7 @@ export default function Mint() {
       if (!!smartContract) {
         dispatch(fetchDataRequest());
         let totalSupply = (await smartContract.totalSupply()).toNumber();
-        // let cost = await smartContract.cost();
+        let cost = await smartContract.PRICE_INO();
         const SaleConfig = await smartContract.saleConfig();
         console.log(SaleConfig, typeof SaleConfig);
         let publicRaffle = SaleConfig === 1;
@@ -108,7 +109,7 @@ export default function Mint() {
         let finalSaleActive = SaleConfig === 4;
         // let maxMintAmount = (await smartContract.maxMintAmountPerTx()).toNumber();
         let ownerAddr = await smartContract.owner();
-        const price = '0.077';
+        const price = etherUtils.formatEther(cost);
         dispatch(
           fetchDataSuccess({
             totalSupply,
