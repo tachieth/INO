@@ -59,7 +59,7 @@ export default function Mainifesto() {
             Your enemy is the droids.
           </Text>
           <Text color="primary" fontSize={{ base: '18px', md: '24px' }} lineHeight="1.2" mb="20px">
-            Ino is a collection of 9,999 non-fungible tokens (NFTs) that is hosted on the Ethereum
+            Ino is a collection of 7,777 non-fungible tokens (NFTs) that is hosted on the Ethereum
             Blockchain. In the process of building the project, we take into account the narrative
             and main goal of Ino living on Planet E1. EVA Labs successfully creates imagery through
             unique and related traits to the storyline of our open-world narration including
@@ -108,11 +108,7 @@ export default function Mainifesto() {
             and meek are the strong Inos. We’re a family. We’re one together. We may all have
             differences but despite the diversity, we are one.
           </Text>
-          <Flex
-            justifyContent="space-around"
-            alignItems="center"
-            mt="80px"
-          >
+          <Flex justifyContent="space-around" alignItems="center" mt="80px">
             <Image src="/images/beach.png" maxW={{ base: '150px', md: '400px' }} />
             <Image src="/images/swamp.png" maxW={{ base: '150px', md: '400px' }} />
           </Flex>

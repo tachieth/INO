@@ -37,10 +37,9 @@ const web3Modal = new Web3Modal({
 
 const mintState = {
     0: "PAUSED",
-    1: "PUBLICRAFFLE",
-    2: "PUBLIC",
-    3: "INOLIST",
-    4: "FINAL"
+    1: "PUBLIC",
+    2: "INOLIST",
+    3: "FINAL"
   }
 
 export default function Mint() {
@@ -111,10 +110,9 @@ export default function Mint() {
         let cost = await smartContract.PRICE_INO();
         const SaleConfig = await smartContract.saleConfig();
         console.log(SaleConfig, typeof SaleConfig);
-        let publicRaffle = SaleConfig === 1;
-        let presaleActive = SaleConfig === 3;
-        let saleActive = SaleConfig === 2;
-        let finalSaleActive = SaleConfig === 4;
+        let presaleActive = SaleConfig === 2;
+        let saleActive = SaleConfig === 1;
+        let finalSaleActive = SaleConfig === 3;
         // let maxMintAmount = (await smartContract.maxMintAmountPerTx()).toNumber();
         let ownerAddr = await smartContract.owner();
         const price = etherUtils.formatEther(cost);
@@ -126,7 +124,6 @@ export default function Mint() {
             presaleActive,
             saleActive,
             finalSaleActive,
-            publicRaffle,
             saleConfig: SaleConfig
           })
         );
@@ -262,11 +259,11 @@ export default function Mint() {
     try {
       toast.info('Preparing your NFT...');
       const value = etherUtils.parseEther((Number(data.cost) * Number(count)).toString());
-      const estimate = await smartContract.estimateGas.publicMint(count, {
+      const estimate = await smartContract.estimateGas.finalMint(count, {
         value,
         from: address,
       });
-      const trx = await smartContract.publicMint(count, {
+      const trx = await smartContract.finalMint(count, {
         value,
         from: address,
         gasLimit: estimate,
@@ -284,71 +281,6 @@ export default function Mint() {
         toast.error('Insufficient Funds');
       } else if (error.message.includes('Not a valid leaf in the Merkle tree')) {
         toast.error('Not a whitelist user');
-      } else {
-        const formatedError = error.message.split('{')[0];
-        if (formatedError.includes('execution reverted:')) {
-          toast.error(formatedError.split('execution reverted:')[1]);
-        } else {
-          toast.error(formatedError);
-        }
-      }
-    }
-  };
-
-  const raffleClaimNFTs = async () => {
-    if (count <= 0) {
-      return;
-    }
-
-    if (whitelist.length === 0) {
-      toast.error('Something went wrong!');
-      return;
-    }
-
-    if (!smartContract) {
-      toast.error('Something went wrong!');
-      return;
-    }
-
-    try {
-      toast.info('Preparing your NFT...');
-      const value = etherUtils.parseEther((Number(data.cost) * Number(count)).toString());
-      const res = await axios.post(
-        `${VITE_MERKEL_TREE_API}/hash`,
-        {
-          data: { whitelist: JSON.stringify(whitelist), address },
-        },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        }
-      );
-      const { hash, proof } = res.data;
-      const estimate = await smartContract.estimateGas.publicRaffle(count, proof, {
-        value,
-        from: address,
-      });
-      const trx = await smartContract.publicRaffle(count, proof, {
-        value,
-        from: address,
-        gasLimit: estimate,
-      });
-      const receipt = await trx.wait();
-      console.log(receipt);
-      toast.success('Woohoo! NFT minted successfully!');
-      getData();
-    } catch (err) {
-      const error =
-        Object.keys(err).includes('message') && !Object.keys(err).includes('error')
-          ? err
-          : err.error;
-      if (error.message.includes('insufficient funds')) {
-        toast.error('Insufficient Funds');
-      } else if (error.message.includes('Not a valid leaf in the Merkle tree')) {
-        toast.error('Free Mint is only for M1 Holders, Hang tight till Public Sale');
-      } else if (error.message.includes('Invalid params')) {
-        toast.error('Invalid Data!');
       } else {
         const formatedError = error.message.split('{')[0];
         if (formatedError.includes('execution reverted:')) {
@@ -540,20 +472,19 @@ export default function Mint() {
             blockchainLoading ||
             data.loading ||
             fetching ||
-            (address && !data.saleActive && !data.presaleActive && !data.finalSaleActive && !data.publicRaffle)
+            (address && !data.saleActive && !data.presaleActive && !data.finalSaleActive)
           }
           opacity={
             blockchainLoading ||
             data.loading ||
             fetching ||
-            (address && !data.saleActive && !data.presaleActive && !data.finalSaleActive && !data.publicRaffle)
+            (address && !data.saleActive && !data.presaleActive && !data.finalSaleActive)
               ? 0.5
               : 1
           }
           onClick={() => {
             if (!address) connect();
             if (address && data.finalSaleActive) finalClaimNFTs();
-            if (address && data.publicRaffle) raffleClaimNFTs();
             if (address && data.saleActive) claimNFTs();
             if (address && data.presaleActive) whitelistNFTs();
           }}
@@ -565,8 +496,7 @@ export default function Mint() {
               ? 'Please wait...'
               : !data.presaleActive &&
                 !data.saleActive &&
-                !data.finalSaleActive &&
-                !data.publicRaffle
+                !data.finalSaleActive
               ? 'Sale Not Active'
               : 'MINT'}
           </Text>
