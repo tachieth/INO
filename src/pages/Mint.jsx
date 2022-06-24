@@ -371,7 +371,7 @@ export default function Mint() {
           <Box display="inline-block" opacity="0.8">
             {!address ? 'X' : data.maxSupply - data.totalSupply}
           </Box>
-          /10,000 REMAINING
+          /7,777 REMAINING
         </Text>
         <Image src="/images/mint_banner.png" maxW={{ base: '100%', md: '500px' }} my="30px" />
         <Text color="primary" fontSize={{ base: '20px', md: '32px' }} fontWeight="bold">

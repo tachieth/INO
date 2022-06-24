@@ -5,7 +5,7 @@ const initialState = {
   totalSupply: 0,
   cost: 0.15,
   error: null,
-  maxSupply: 9999,
+  maxSupply: 7777,
   maxMintAmount: 5,
   saleActive: false,
   presaleActive: false,
