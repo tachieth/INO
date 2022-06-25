@@ -198,7 +198,7 @@ export default function Header() {
                   backgroundRepeat="no-repeat"
                   backgroundSize="100%"
                   p="15px"
-                  href="https://opensea.io/"
+                  href="https://opensea.io/collection/projectino"
                   // mr="30px"
                   color="black"
                   isExternal
@@ -395,7 +395,7 @@ export default function Header() {
                   // mr="30px"
                   color="black"
                 >
-                  <Link href="https://opensea.io/" isExternal>
+                  <Link href="https://opensea.io/collection/projectino" isExternal>
                     <Image maxW="17px" mx="auto" src="/images/opensea.png" />
                   </Link>
                 </Flex>
