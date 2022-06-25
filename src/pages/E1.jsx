@@ -311,7 +311,10 @@ export default function E1() {
                   <Image
                     pl={{ base: '0', md: '"20px"' }}
                     mb={{ base: '10px', md: '0' }}
-                    src="/images/cube.png"
+                    src={`/images/${factionData[faction].image}`}
+                    maxW={{ base: '60px', md: '100px' }}
+                    ml={{ base: '0', md: '10px' }}
+                    borderRadius="10px"
                   />
                 </Box>
               ))}

@@ -177,7 +177,7 @@ export default function Header() {
                   display="flex"
                   alignItems="center"
                   justifyContent="center"
-                  backgroundImage="/images/insta.png"
+                  backgroundImage="/images/discord.png"
                   backgroundPosition="center"
                   backgroundRepeat="no-repeat"
                   backgroundSize="100%"
@@ -188,6 +188,22 @@ export default function Header() {
                   isExternal
                 >
                   <Image maxW="17px" mx="auto" src="/images/ig.png" />
+                </Link>
+                <Link
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  backgroundImage="/images/insta.png"
+                  backgroundPosition="center"
+                  backgroundRepeat="no-repeat"
+                  backgroundSize="100%"
+                  p="15px"
+                  href="https://opensea.io/"
+                  // mr="30px"
+                  color="black"
+                  isExternal
+                >
+                  <Image maxW="17px" mx="auto" src="/images/opensea.png" />
                 </Link>
               </Flex>
             </Flex>
@@ -356,17 +372,31 @@ export default function Header() {
                 <Flex
                   alignItems="center"
                   justifyContent="center"
-                  backgroundImage="/images/insta.png"
+                  backgroundImage="/images/discord.png"
                   backgroundPosition="center"
                   backgroundRepeat="no-repeat"
                   backgroundSize="contain"
                   p="15px"
-                  href="#about"
                   // mr="30px"
                   color="black"
                 >
                   <Link href="https://instagram.com/theprojectino?igshid=YmMyMTA2M2Y=" isExternal>
                     <Image maxW="17px" mx="auto" src="/images/ig.png" />
+                  </Link>
+                </Flex>
+                <Flex
+                  alignItems="center"
+                  justifyContent="center"
+                  backgroundImage="/images/insta.png"
+                  backgroundPosition="center"
+                  backgroundRepeat="no-repeat"
+                  backgroundSize="contain"
+                  p="15px"
+                  // mr="30px"
+                  color="black"
+                >
+                  <Link href="https://opensea.io/" isExternal>
+                    <Image maxW="17px" mx="auto" src="/images/opensea.png" />
                   </Link>
                 </Flex>
               </Flex>
