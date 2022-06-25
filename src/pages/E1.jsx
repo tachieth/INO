@@ -49,27 +49,27 @@ const data = [
 
 const factionData = [
   {
-    name: 'The Selfless – Ganko 頑固 (WE’RE NOT FOND OF RULES):',
+    name: 'Ganko 頑固:',
     description: `Don't follow rules, leaders themselves, trouble maker // Following the rules was never an option for these rebels and deviants. They are the leaders themselves and they command the control of the alliance. They're reckless trouble makers that cause havoc but still do the job by the end of the day.`,
     image: 'e1_faction_5.png',
   },
   {
-    name: 'The Acceptance – Yurushi 許し (THE ACCEPTANCE & FORGIVENESS):',
+    name: 'Yurushi 許し:',
     description: `Soft people, forgive and joyful //  They are the forgiving ones. They put their hearts and emotions firsthand before acting up. They have a great sense of acceptance and they're very careful and meticulous with their actions for the safety of the rest of the travellers.`,
     image: 'e1_faction_4.png',
   },
   {
-    name: 'The Fearless – Yukan 勇敢 (THE BRAVE):',
+    name: 'Yukan 勇敢:',
     description: `They do not have any ounce of fear in their system. They are the bravest ones with the greatest influence in the movement of the resistance army against the droids. They are never afraid to shed blood for the Inos to win every war on the battlefield.`,
     image: 'e1_faction_3.png',
   },
   {
-    name: 'The Artful - Waké 分け (THE DIVISION):',
+    name: 'Waké 分け:',
     description: `Divides people, segregates // They are the brains of the system. They're accountable for the careful selection of segregation of the Inos to their respective roles and duties as a traveller. `,
     image: 'e1_faction_2.png',
   },
   {
-    name: 'The Curious - Miru',
+    name: 'Miru ミル:',
     description: `They hold great power of intellect who relies on their rationality rather than their emotions and feelings. They bring the Inos together as one to pursue mastering the art of learning more complex form of intelligence and strategy against the droids.`,
     image: 'e1_faction_1.png',
   },

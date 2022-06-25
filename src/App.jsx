@@ -36,7 +36,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-      <ToastContainer />
+      <ToastContainer position="bottom-right" />
     </ChakraProvider>
   );
 }
