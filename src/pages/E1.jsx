@@ -28,7 +28,7 @@ const data = [
   {
     title: 'How many NFTs are in Project INO NFT Collection? ',
     content:
-      'Ino is a collection of 9,999 non-fungible tokens (NFTs) that is hosted on the Ethereum Blockchain.',
+      'Ino is a collection of 7,999 non-fungible tokens (NFTs) that is hosted on the Ethereum Blockchain.',
   },
   {
     title: 'Who founded Project Ino?',
@@ -43,7 +43,7 @@ const data = [
   {
     title: 'What is our aim?',
     content:
-      'Our goal stands to represent web3 travellers to venture beyond Planet E1 in the form of Ino. You live the life of an Ino, undertake new experiences and aid out in changing our planet. You\'re co-existing amongst other Ino and you have every right and capability to make a change. Your enemy is the droids.',
+      "Our goal stands to represent web3 travellers to venture beyond Planet E1 in the form of Ino. You live the life of an Ino, undertake new experiences and aid out in changing our planet. You're co-existing amongst other Ino and you have every right and capability to make a change. Your enemy is the droids.",
   },
 ];
 

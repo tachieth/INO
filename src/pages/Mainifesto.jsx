@@ -59,7 +59,7 @@ export default function Mainifesto() {
             Your enemy is the droids.
           </Text>
           <Text color="primary" fontSize={{ base: '18px', md: '24px' }} lineHeight="1.2" mb="20px">
-            Ino is a collection of 7,777 non-fungible tokens (NFTs) that is hosted on the Ethereum
+            Ino is a collection of 7,999 non-fungible tokens (NFTs) that is hosted on the Ethereum
             Blockchain. In the process of building the project, we take into account the narrative
             and main goal of Ino living on Planet E1. EVA Labs successfully creates imagery through
             unique and related traits to the storyline of our open-world narration including
