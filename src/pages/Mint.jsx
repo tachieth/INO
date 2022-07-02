@@ -107,22 +107,22 @@ export default function Mint() {
       if (!!smartContract) {
         dispatch(fetchDataRequest());
         let totalSupply = (await smartContract.totalSupply()).toNumber();
-        let cost = await smartContract.PRICE_INO();
+        // let cost = await smartContract.PRICE_INO();
         const SaleConfig = await smartContract.saleConfig();
         console.log(SaleConfig, typeof SaleConfig);
-        let presaleActive = SaleConfig === 2;
-        let saleActive = SaleConfig === 1;
-        let finalSaleActive = SaleConfig === 3;
+        let presaleActive = SaleConfig === 1;
+        // let saleActive = SaleConfig === 1;
+        let finalSaleActive = SaleConfig === 2;
         // let maxMintAmount = (await smartContract.maxMintAmountPerTx()).toNumber();
         let ownerAddr = await smartContract.owner();
-        const price = etherUtils.formatEther(cost);
+        // const price = etherUtils.formatEther(cost);
         dispatch(
           fetchDataSuccess({
             totalSupply,
-            cost: price,
+            cost: 0,
             owner: ownerAddr,
             presaleActive,
-            saleActive,
+            // saleActive,
             finalSaleActive,
             saleConfig: SaleConfig
           })
@@ -472,20 +472,20 @@ export default function Mint() {
             blockchainLoading ||
             data.loading ||
             fetching ||
-            (address && !data.saleActive && !data.presaleActive && !data.finalSaleActive)
+            (address && !data.presaleActive && !data.finalSaleActive)
           }
           opacity={
             blockchainLoading ||
             data.loading ||
             fetching ||
-            (address && !data.saleActive && !data.presaleActive && !data.finalSaleActive)
+            (address && !data.presaleActive && !data.finalSaleActive)
               ? 0.5
               : 1
           }
           onClick={() => {
             if (!address) connect();
             if (address && data.finalSaleActive) finalClaimNFTs();
-            if (address && data.saleActive) claimNFTs();
+            // if (address && data.saleActive) claimNFTs();
             if (address && data.presaleActive) whitelistNFTs();
           }}
         >
@@ -495,7 +495,6 @@ export default function Mint() {
               : blockchainLoading || data.loading || fetching
               ? 'Please wait...'
               : !data.presaleActive &&
-                !data.saleActive &&
                 !data.finalSaleActive
               ? 'Sale Not Active'
               : 'MINT'}
