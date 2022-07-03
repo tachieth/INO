@@ -37,9 +37,8 @@ const web3Modal = new Web3Modal({
 
 const mintState = {
     0: "PAUSED",
-    1: "PUBLIC",
-    2: "INOLIST",
-    3: "FINAL"
+    1: "INOLIST",
+    2: "FINAL"
   }
 
 export default function Mint() {
@@ -394,7 +393,7 @@ export default function Mint() {
               1
             </Text>
           </Flex>
-          <Flex
+          {/* <Flex
             as="button"
             opacity={Number(count) === 2 ? '1' : '0.8'}
             justifyContent="center"
@@ -425,7 +424,7 @@ export default function Mint() {
             <Text color="white" fontSize={{ base: '20px', md: '32px' }} fontWeight="bold">
               3
             </Text>
-          </Flex>
+          </Flex> */}
           {/* <Flex
             as="button"
             opacity={Number(count) === 4 ? '1' : '0.8'}
