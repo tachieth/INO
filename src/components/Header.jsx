@@ -60,7 +60,7 @@ export default function Header() {
                   HOME
                 </Box>
               </RouteLink>
-              <RouteLink to="/mint">
+              {/* <RouteLink to="/mint">
                 <Box
                   backgroundImage="/images/mint.png"
                   backgroundPosition="center"
@@ -71,7 +71,7 @@ export default function Header() {
                 >
                   MINT
                 </Box>
-              </RouteLink>
+              </RouteLink> */}
               <RouteLink to="/e1">
                 <Box
                   backgroundImage="/images/e1.png"
@@ -255,7 +255,7 @@ export default function Header() {
                   HOME
                 </Box>
               </RouteLink>
-              <RouteLink to="/mint">
+              {/* <RouteLink to="/mint">
                 <Box
                   backgroundImage="/images/mint.png"
                   backgroundPosition="center"
@@ -267,7 +267,7 @@ export default function Header() {
                 >
                   MINT
                 </Box>
-              </RouteLink>
+              </RouteLink> */}
               <RouteLink to="/e1">
                 <Box
                   backgroundImage="/images/e1.png"
