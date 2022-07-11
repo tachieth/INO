@@ -79,9 +79,47 @@ html {
   transform: translate(-50%, -50%);
 }
 
+.gallery-filter-input:focus {
+  box-shadow: none !important;
+}
+
+.gallery-filter .chakra-accordion__item:last-of-type {
+  border-bottom: 2px solid #096069;
+}
+
 /* .vertical-timeline.vertical-timeline--two-columns:before {
   background: #002a44;
 } */
+
+.pagination-container {
+  background: #096069;
+  padding: 10px 20px;
+  margin-top: 50px;
+}
+
+.pagination-container ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+.pagination-container li {
+  color: #effaff;
+  margin-right: 15px;
+}
+
+.chakra-switch span:focus {
+  box-shadow: none !important;
+}
+
+.chakra-switch[data-checked] span {
+  background: #096069 !important;
+}
+
+.chakra-switch[data-checked] span span {
+  background: #effaff !important;
+}
 
 @media screen and (max-width: 1169px) {
   .vertical-timeline-element-icon {
@@ -107,5 +145,13 @@ html {
   .home-video {
     max-width: 70%;
     position: absolute;
+  }
+
+  .pagination-container li {
+    margin-right: 5px;
+  }
+
+  .pagination-container li a {
+    font-size: 14px;
   }
 }

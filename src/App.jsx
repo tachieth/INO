@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 
 import { Header } from './components';
 import { Home, E1, EvaMap, Mainifesto, Mint, Gallery, Career } from './pages';
+import { rarityStore } from './helpers/rarity';
 
 const extendedTheme = extendTheme({
   ...theme,
@@ -21,6 +22,9 @@ const extendedTheme = extendTheme({
 });
 
 function App() {
+  const traits = rarityStore.getTraits();
+  const count = rarityStore.getCount();
+  const meta = rarityStore.getMeta();
   return (
     <ChakraProvider theme={extendedTheme}>
       <BrowserRouter>
@@ -31,7 +35,7 @@ function App() {
             <Route path="/evamap" element={<EvaMap />} />
             <Route path="/manifesto" element={<Mainifesto />} />
             {/* <Route path="/mint" element={<Mint />} /> */}
-            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/gallery" element={<Gallery traits={traits} count={count} meta={meta} />} />
             <Route path="/career" element={<Career />} />
           </Route>
         </Routes>
