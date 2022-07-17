@@ -96,6 +96,11 @@ export default function Gallery({ traits, count, meta }) {
     
   };
 
+  const formatImage = (image) => {
+    const imageStr = image.split('ipfs://')[1];
+    return `https://gateway.pinata.cloud/ipfs/${imageStr}`;
+  }
+
   return (
     <Flex
       minH={{ base: '100vh', md: '100vh' }}
@@ -138,7 +143,9 @@ export default function Gallery({ traits, count, meta }) {
         </Flex>
 
         <Flex w="100%" alignItems="center" justifyContent="flex-end" mt="50px">
-          <Text color="primary" fontWeight="bold" mr="10px">Sort By Rank:</Text>
+          <Text color="primary" fontWeight="bold" mr="10px">
+            Sort By Rank:
+          </Text>
           <Switch id="sort-switch" size="lg" onChange={handleSort} />
         </Flex>
 
@@ -257,7 +264,7 @@ export default function Gallery({ traits, count, meta }) {
             >
               {tokens.data &&
                 tokens.data.map((nft) => (
-                  <GridItem>
+                  <GridItem key={nft.image}>
                     <Flex
                       maxW="200px"
                       mx="auto"
@@ -281,7 +288,7 @@ export default function Gallery({ traits, count, meta }) {
                         <Image
                           mb="10px"
                           borderRadius="20px"
-                          src={nft.image}
+                          src={formatImage(nft.image)}
                           w="100%"
                           objectFit="cover"
                         />

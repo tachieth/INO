@@ -35,7 +35,10 @@ function App() {
             <Route path="/evamap" element={<EvaMap />} />
             <Route path="/manifesto" element={<Mainifesto />} />
             {/* <Route path="/mint" element={<Mint />} /> */}
-            <Route path="/gallery" element={<Gallery traits={traits} count={count} meta={meta} />} />
+            <Route
+              path="/gallery"
+              element={<Gallery traits={traits} count={count} meta={meta} />}
+            />
             <Route path="/career" element={<Career />} />
           </Route>
         </Routes>
@@ -45,7 +48,7 @@ function App() {
   );
 }
 
-const Layout = ({ connect, address }) => {
+const Layout = () => {
   return (
     <Box minH="100vh" bg="#FEFAEF">
       <Box>
