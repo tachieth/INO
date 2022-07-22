@@ -13,9 +13,8 @@ export default function DetailsModal({ onClose, id, data }) {
       return str;
     }
   }
-  const formatImage = (image) => {
-    const imageStr = image.split('ipfs://')[1];
-    return `https://gateway.pinata.cloud/ipfs/${imageStr}`;
+  const formatImage = () => {
+    return `https://projectino.app/images/${id}.png`;
   };
   return (
     <Flex
@@ -57,7 +56,7 @@ export default function DetailsModal({ onClose, id, data }) {
         </Box>
         <Flex py="10px" textAlign="left" w="100%" flexDirection={{ base: 'column', md: 'row' }}>
           <Box bg="rgba(9, 96, 105, 0.2)" w="350px" h="350px">
-            <Image src={formatImage(data.image)} w="100%" h="100%" objectFit="cover" />
+            <Image src={formatImage()} w="100%" h="100%" objectFit="cover" />
           </Box>
           <Box py="20px" px={{ base: '20px', md: '0' }} ml={{ base: 0, md: '20px' }} w="100%">
             <Flex alignItems="center" mb="50px">

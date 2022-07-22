@@ -96,9 +96,8 @@ export default function Gallery({ traits, count, meta }) {
     
   };
 
-  const formatImage = (image) => {
-    const imageStr = image.split('ipfs://')[1];
-    return `https://gateway.pinata.cloud/ipfs/${imageStr}`;
+  const formatImage = (id) => {
+    return `https://projectino.app/images/${id}.png`;
   }
 
   return (
@@ -288,7 +287,7 @@ export default function Gallery({ traits, count, meta }) {
                         <Image
                           mb="10px"
                           borderRadius="20px"
-                          src={formatImage(nft.image)}
+                          src={formatImage(nft.edition)}
                           w="100%"
                           objectFit="cover"
                         />
