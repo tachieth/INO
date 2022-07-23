@@ -97,7 +97,7 @@ export default function Gallery({ traits, count, meta }) {
   };
 
   const formatImage = (id) => {
-    return `https://projectino.app/images/${id}.png`;
+    return `https://projectino.app/images/${Number(id) - 1}.png`;
   }
 
   return (

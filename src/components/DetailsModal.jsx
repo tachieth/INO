@@ -14,7 +14,7 @@ export default function DetailsModal({ onClose, id, data }) {
     }
   }
   const formatImage = () => {
-    return `https://projectino.app/images/${id}.png`;
+    return `https://projectino.app/images/${Number(id) - 1}.png`;
   };
   return (
     <Flex
