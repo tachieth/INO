@@ -72,7 +72,7 @@ export default function Gallery({ traits, count, meta }) {
   };
 
   const openToken = () => {
-    const updatedTokens = rarityStore.getById(searchToken);
+    const updatedTokens = rarityStore.getById(Number(searchToken) - 1);
     console.log({ data: [updatedTokens], total: 1 });
     setTokens({ data: [updatedTokens], total: 1 });
   };
@@ -85,6 +85,7 @@ export default function Gallery({ traits, count, meta }) {
       }
     } else {
       setsearchToken('');
+      getPages();
     }
   };
 
