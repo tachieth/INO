@@ -32,7 +32,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/e1" element={<E1 />} />
-            <Route path="/evamap" element={<EvaMap />} />
+            {/* <Route path="/evamap" element={<EvaMap />} /> */}
             <Route path="/manifesto" element={<Mainifesto />} />
             {/* <Route path="/mint" element={<Mint />} /> */}
             <Route

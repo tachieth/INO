@@ -85,7 +85,7 @@ export default function Header() {
                   E1
                 </Box>
               </RouteLink>
-              <RouteLink to="/evamap">
+              {/* <RouteLink to="/evamap">
                 <Box
                   backgroundImage="/images/galler.png"
                   backgroundPosition="center"
@@ -97,7 +97,7 @@ export default function Header() {
                 >
                   EVA MAP
                 </Box>
-              </RouteLink>
+              </RouteLink> */}
               <RouteLink to="/manifesto">
                 <Box
                   // alignItems="center"
@@ -281,7 +281,7 @@ export default function Header() {
                   E1
                 </Box>
               </RouteLink>
-              <RouteLink to="/evamap">
+              {/* <RouteLink to="/evamap">
                 <Box
                   backgroundImage="/images/galler.png"
                   backgroundPosition="center"
@@ -293,7 +293,7 @@ export default function Header() {
                 >
                   EVA MAP
                 </Box>
-              </RouteLink>
+              </RouteLink> */}
               <RouteLink to="/manifesto">
                 <Box
                   alignItems="center"
