@@ -26,7 +26,7 @@ const PAGE_LIMIT = 20;
 export default function Gallery({ traits, count, meta }) {
   const [tokens, setTokens] = useState([]);
   const [token, setToken] = useState(null);
-  const [searchToken, setsearchToken] = useState(null);
+  const [searchToken, setsearchToken] = useState(undefined);
   const [tokenId, setTokenId] = useState('');
   const [sortBy, setSortBy] = useState(null);
   const [filter, setFilter] = useState({
@@ -98,7 +98,7 @@ export default function Gallery({ traits, count, meta }) {
   };
 
   const formatImage = (id) => {
-    return `https://projectino.app/images/${Number(id) - 1}.png`;
+    return `https://projectino.app/images/${Number(id)}.png`;
   }
 
   return (
